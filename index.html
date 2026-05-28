@@ -373,20 +373,12 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .eco-pillar h3{font-family:var(--font-heading);font-size:20px;font-weight:800;color:#FFD700;margin-bottom:10px;text-transform:uppercase}
 .eco-pillar p{color:rgba(255,255,255,0.85);font-size:14px;line-height:1.65}
 .eco-copy{max-width:680px;margin:0 auto;color:rgba(255,255,255,0.82);font-size:15px;line-height:1.75}
-/* ── SCROLL REVEAL ── */
-.js-reveal [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity 0.5s ease,transform 0.5s ease}
-.js-reveal [data-reveal].is-visible{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.js-reveal [data-reveal]{opacity:1!important;transform:none!important;transition:none!important}}
 /* ── ECO STEP NUMBERS ── */
 .eco-step-num{display:block;font-family:var(--font-heading);font-size:58px;font-weight:800;color:rgba(255,255,255,0.07);line-height:1;margin-bottom:-4px;letter-spacing:-2px;user-select:none;pointer-events:none}
 /* ── ECO ICON ANIMATIONS ── */
 @keyframes eco-bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-8px)}}
 @keyframes eco-spin-once{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 @keyframes eco-sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
-.eco-pillar.is-visible .eco-icon-bounce{animation:eco-bounce 0.65s ease-out 0.3s both}
-.eco-pillar.is-visible .eco-icon-spin{animation:eco-spin-once 0.7s ease-out 0.3s both}
-.eco-pillar.is-visible .eco-icon-sway{animation:eco-sway 0.65s ease-in-out 0.3s both}
-@media(prefers-reduced-motion:reduce){.eco-pillar.is-visible .eco-icon-bounce,.eco-pillar.is-visible .eco-icon-spin,.eco-pillar.is-visible .eco-icon-sway{animation:none}}
 /* ── ECO CALLOUT ── */
 .eco-callout{max-width:700px;margin:0 auto;border-left:3px solid rgba(255,215,0,0.6);padding:22px 28px;background:rgba(255,255,255,0.06);border-radius:0 6px 6px 0;text-align:left}
 .eco-callout p{color:rgba(255,255,255,0.92);font-size:16px;line-height:1.8;margin:0;font-style:italic}
@@ -1324,24 +1316,6 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
     document.addEventListener('touchend',function(){dragging=false;});
   });
 
-  // Scroll reveal
-  document.documentElement.classList.add('js-reveal');
-  (function(){
-    if(!window.IntersectionObserver){
-      document.querySelectorAll('[data-reveal]').forEach(function(el){el.classList.add('is-visible');});
-      return;
-    }
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(!entry.isIntersecting) return;
-        var el=entry.target;
-        var delay=parseInt(el.dataset.revealDelay)||0;
-        setTimeout(function(){el.classList.add('is-visible');},delay);
-        io.unobserve(el);
-      });
-    },{threshold:0.12,rootMargin:'0px 0px -32px 0px'});
-    document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);});
-  })();
 
   // Stat counters — count up when owner stats scroll into view
   (function(){
