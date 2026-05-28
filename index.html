@@ -83,11 +83,9 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .hero .btn-primary:hover{background:transparent!important;color:#C8A84B!important}
 .hero .btn-ghost{background:#C8A84B!important;border-color:#C8A84B!important;color:#0a140a!important;font-weight:700!important}
 .hero .btn-ghost:hover{background:#b8943e!important;border-color:#b8943e!important;color:#0a140a!important}
-.trust-ticker{background:#1C6E1C;border-bottom:1px solid rgba(255,255,255,0.15);overflow:hidden}
-.trust-ticker-wrap{display:flex;overflow:hidden;mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent)}
-.trust-ticker-track{display:flex;align-items:center;flex-shrink:0;min-width:100%;animation:trust-scroll 36s linear infinite;padding:26px 0}
-@keyframes trust-scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-@media(prefers-reduced-motion:reduce){.trust-ticker-track{animation:none}}
+.trust-ticker{background:#1C6E1C;border-bottom:1px solid rgba(255,255,255,0.15)}
+.trust-ticker-wrap{display:flex;justify-content:center;overflow:hidden}
+.trust-ticker-track{display:flex;align-items:center;flex-wrap:wrap;justify-content:center;gap:0;padding:20px 32px}
 .t-item{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,0.82);font-size:15px;font-weight:600;white-space:nowrap;padding:0 24px}
 .t-icon{width:19px;height:19px;flex-shrink:0;color:#FFD700;display:flex;align-items:center;justify-content:center}
 .t-icon svg{width:100%;height:100%}
@@ -107,13 +105,13 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .sf-section .eyebrow-text--green{color:rgba(168,181,168,0.55)}
 .sf-section .eyebrow-line--green{background:rgba(168,181,168,0.2)}
 .sf-list{border-top:1px solid rgba(255,255,255,0.08);list-style:none}
-.sf-item{display:grid;grid-template-columns:1fr 34px;align-items:start;gap:24px;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);background:transparent}
+.sf-item{display:block;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);background:transparent}
 .sf-icon-col{display:none}
 .sf-scene-icon{display:none}
 .sf-num-small{display:none}
 .sf-item h3{font-family:var(--font-heading);font-size:clamp(22px,3vw,36px);font-weight:800;text-transform:uppercase;color:#F5F5F0;margin-bottom:10px;line-height:1.15}
 .sf-item p{color:rgba(200,215,200,0.65);font-size:15px;line-height:1.75;margin:0;max-width:720px}
-.sf-x{color:#c0453a;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding-top:6px}
+.sf-x{display:none}
 .sf-footer{display:flex;align-items:center;justify-content:center;gap:14px;padding:44px 0 16px;border-top:1px solid rgba(255,215,0,0.25);margin-top:8px}
 .sf-footer-text{font-family:var(--font-heading);font-size:clamp(22px,2.8vw,34px);font-weight:800;text-transform:uppercase;color:#FFD700;letter-spacing:0.08em}
 .ref-section{background:#f9f7f2;padding:96px 32px}
@@ -335,7 +333,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
   .svc-card--featured,.svc-card--wide{grid-column:span 1}
   .svc-card{min-height:220px}
   .rw-cards-top{grid-template-columns:1fr}
-  .sf-item{grid-template-columns:50px 1fr 24px;gap:16px;padding-left:12px}
+  .sf-item{padding-left:12px}
   .sf-scene-icon{width:32px;height:32px}
 }
 @media(max-width:600px){
@@ -397,13 +395,14 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .eco-callout-stars{color:#FFD700;font-size:13px;letter-spacing:2px;flex-shrink:0}
 .eco-callout-attr{color:rgba(255,255,255,0.55);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;font-style:normal}
 @media(max-width:768px){.ba-grid{grid-template-columns:1fr}.eco-pillars{grid-template-columns:1fr;gap:16px}.eco-callout{padding:16px 20px}}
-/* PARTNER TRUST BAR */
-.partner-trust-bar{background:#f5f7f5;border-bottom:1px solid #D8EAD8;padding:18px 32px;display:flex;align-items:center;gap:24px;overflow:hidden}
-.partner-trust-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#888;white-space:nowrap;flex-shrink:0}
-.partner-ticker-wrap{flex:1;overflow:hidden;mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent)}
-.partner-ticker-track{display:flex;align-items:center;gap:52px;width:max-content;animation:scroll-left 32s linear infinite;padding:4px 0}
-.partner-ticker-track img{height:52px;width:auto;display:block;flex-shrink:0;opacity:0.82;filter:none;transition:opacity 0.2s}
-.partner-ticker-track img:hover{opacity:1}
+/* PARTNER LOGOS IN ABOUT SECTION */
+.partner-logos{padding:40px 32px 0;border-top:1px solid rgba(0,0,0,0.07);margin-top:40px;max-width:1100px;margin-left:auto;margin-right:auto}
+.partner-logos-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#999;margin-bottom:24px;text-align:center}
+.partner-logos-grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:28px 40px}
+.partner-logos-grid img{height:44px;width:auto;display:block;opacity:0.55;filter:grayscale(1);transition:opacity 0.2s,filter 0.2s}
+.partner-logos-grid img:hover{opacity:0.85;filter:grayscale(0)}
+.partner-logos-grid img:nth-child(odd){transform:translateY(-5px)}
+.partner-logos-grid img:nth-child(even){transform:translateY(5px)}
 /* MERGED HOW IT WORKS */
 .combined-hiw{background:linear-gradient(to bottom,#FFED85 0%,#FFF8B0 100%);padding:64px 32px;position:relative;overflow:hidden;border-top:none}
 .combined-hiw-dotgrid{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,0,0,0.06) 1px,transparent 1px);background-size:32px 32px;opacity:0.2;pointer-events:none}
@@ -637,31 +636,6 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
     </div>
   </section>
 
-  <!-- 2a. PARTNER TRUST BAR -->
-  <div class="partner-trust-bar" role="region" aria-label="Trusted by Long Island professionals">
-    <span class="partner-trust-label">Trusted by Long Island professionals</span>
-    <div class="partner-ticker-wrap">
-      <div class="partner-ticker-track">
-        <img src="images/partner-public-storage.png" alt="Public Storage" loading="lazy">
-        <img src="images/partner-cubesmart.png" alt="CubeSmart Self Storage" loading="lazy">
-        <img src="images/partner-prime-storage.jpg" alt="Prime Storage" loading="lazy">
-        <img src="images/partner-li-ducks.png" alt="Long Island Ducks" loading="lazy">
-        <img src="images/artboard-1.png" alt="Century 21" loading="lazy">
-        <img src="images/artboard-4.png" alt="Prudential Real Estate" loading="lazy">
-        <img src="images/artboard-2.png" alt="RealtyConnect USA" loading="lazy">
-        <img src="images/artboard-3.png" alt="Douglas Elliman" loading="lazy">
-        <img src="images/partner-public-storage.png" alt="" loading="lazy" aria-hidden="true">
-        <img src="images/partner-cubesmart.png" alt="" loading="lazy" aria-hidden="true">
-        <img src="images/partner-prime-storage.jpg" alt="" loading="lazy" aria-hidden="true">
-        <img src="images/partner-li-ducks.png" alt="" loading="lazy" aria-hidden="true">
-        <img src="images/artboard-1.png" alt="" loading="lazy" aria-hidden="true">
-        <img src="images/artboard-4.png" alt="" loading="lazy" aria-hidden="true">
-        <img src="images/artboard-2.png" alt="" loading="lazy" aria-hidden="true">
-        <img src="images/artboard-3.png" alt="" loading="lazy" aria-hidden="true">
-      </div>
-    </div>
-  </div>
-
   <!-- 2. TRUST TICKER -->
   <div class="trust-ticker" role="region" aria-label="Why choose Integrity Hauling">
     <div class="trust-ticker-wrap">
@@ -682,24 +656,6 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
         <span class="t-sep" aria-hidden="true"></span>
         <div class="t-item"><span class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>27 Years in Business</div>
         <span class="t-sep" aria-hidden="true"></span>
-      </div>
-      <div class="trust-ticker-track" aria-hidden="true">
-        <div class="t-item"><span class="t-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>5.0&#9733; Google Rating</div>
-        <span class="t-sep"></span>
-        <div class="t-item"><span class="t-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>Same-Day Service Available</div>
-        <span class="t-sep"></span>
-        <div class="t-item"><span class="t-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>215 Five-Star Reviews</div>
-        <span class="t-sep"></span>
-        <div class="t-item"><span class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>Owner on Every Job</div>
-        <span class="t-sep"></span>
-        <div class="t-item"><span class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span>Licensed &amp; Insured</div>
-        <span class="t-sep"></span>
-        <div class="t-item"><span class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>Free On-Site Quote</div>
-        <span class="t-sep"></span>
-        <div class="t-item"><span class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>Donation-First Disposal</div>
-        <span class="t-sep"></span>
-        <div class="t-item"><span class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>27 Years in Business</div>
-        <span class="t-sep"></span>
       </div>
     </div>
   </div>
@@ -807,6 +763,20 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
         <a href="about.html" class="btn-primary">Meet Brendan &rarr;</a>
       </div>
 
+    </div>
+
+    <div class="partner-logos" data-reveal>
+      <p class="partner-logos-label">Trusted by Long Island professionals</p>
+      <div class="partner-logos-grid">
+        <img src="images/partner-public-storage.png" alt="Public Storage" loading="lazy">
+        <img src="images/partner-cubesmart.png" alt="CubeSmart Self Storage" loading="lazy">
+        <img src="images/partner-prime-storage.jpg" alt="Prime Storage" loading="lazy">
+        <img src="images/partner-li-ducks.png" alt="Long Island Ducks" loading="lazy">
+        <img src="images/artboard-1.png" alt="Century 21" loading="lazy">
+        <img src="images/artboard-4.png" alt="Prudential Real Estate" loading="lazy">
+        <img src="images/artboard-2.png" alt="RealtyConnect USA" loading="lazy">
+        <img src="images/artboard-3.png" alt="Douglas Elliman" loading="lazy">
+      </div>
     </div>
   </section>
 
