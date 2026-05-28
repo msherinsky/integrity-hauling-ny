@@ -97,8 +97,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .eyebrow-text{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px}
 .eyebrow-text--green{color:#1C6E1C}
 .eyebrow-text--yellow{color:#FFD700}
-.sf-section{background:#111c11;padding:56px 32px 64px;border-top:1px solid rgba(255,255,255,0.06);position:relative}
-.sf-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent 0%,#ffffff 100%);pointer-events:none;z-index:2}
+.sf-section{background:#111c11;padding:56px 32px 120px;border-top:1px solid rgba(255,255,255,0.06);position:relative}
 .sf-inner{max-width:720px;margin:0 auto}
 .sf-heading{font-family:var(--font-heading);font-size:clamp(52px,7vw,86px);font-weight:800;text-transform:uppercase;color:#F5F5F0;line-height:1;margin-bottom:32px}
 .sf-heading span{color:var(--color-primary)}
@@ -130,8 +129,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 @keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 @keyframes scroll-right{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
 @media(max-width:900px){.ref-top{grid-template-columns:1fr;gap:48px}}
-/* RISING / — energy lifts out of Sound Familiar urgency into trust territory */
-.owner-section{background:#ffffff;padding:72px 32px 64px;position:relative}
+.owner-section{background:#ffffff;padding:72px 32px 64px;position:relative;z-index:2;margin-top:-88px;border-radius:10px 10px 0 0;box-shadow:0 -16px 48px rgba(0,0,0,0.18)}
 .owner-watermark{display:none}
 .owner-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;position:relative;z-index:1}
 .owner-photo-wrap{position:relative}
@@ -140,7 +138,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .owner-badge-score{display:block;font-family:var(--font-heading);font-weight:800;color:#FFD700;font-size:20px;line-height:1;text-shadow:0 0 12px rgba(255,215,0,0.5)}
 .owner-badge-label{display:block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.8);margin-top:4px}
 .owner-text-head{display:flex;align-items:flex-start;gap:20px;margin-bottom:24px}
-.owner-accent-bar{width:4px;min-height:72px;flex-shrink:0;background:linear-gradient(180deg,#1C6E1C 0%,transparent 100%);border-radius:2px;margin-top:4px}
+.owner-accent-bar{display:none}
 .owner-section h2{font-family:var(--font-heading);font-size:clamp(30px,3.5vw,48px);font-weight:800;color:#111;line-height:1.05}
 .owner-section p{font-size:16px;color:#444;line-height:1.75;margin-bottom:24px}
 .owner-personal{font-style:italic;color:rgba(17,17,17,0.55)!important;margin-top:-8px!important}
