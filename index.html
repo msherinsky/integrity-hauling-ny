@@ -288,16 +288,26 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .section-heading{font-size:clamp(28px,3.5vw,42px);font-weight:800;color:var(--color-body);margin-bottom:12px;line-height:1.1;font-family:var(--font-heading);text-shadow:0 2px 6px rgba(0,0,0,0.10)}
 .section-heading-accent{width:80px;height:5px;background:var(--color-primary);margin-bottom:32px;border-radius:3px}
 .section-heading-accent.centered{margin-left:auto;margin-right:auto}
-.faq-section{background:#FFFFFF;padding:80px 32px;border-top:1px solid #D8EAD8}
+.faq-section{background:linear-gradient(to bottom,#EDF7ED 0%,#FFFFFF 70%);padding:80px 32px;border-top:none}
 .faq-inner{max-width:820px;margin:0 auto;text-align:center}
-.faq-list{margin:36px 0;text-align:left}
+.faq-intro{max-width:600px;margin:0 auto;font-size:15px;color:rgba(26,26,46,0.62);line-height:1.8;text-align:center}
+.faq-list{margin:32px 0;text-align:left}
 .faq-item{border-bottom:1px solid var(--color-border)}
-.faq-question{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;color:var(--color-body);font-size:16px;font-weight:600;gap:16px;user-select:none;font-family:var(--font)}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;color:var(--color-body);font-size:16px;font-weight:600;gap:12px;user-select:none;font-family:var(--font)}
 .faq-question:hover{color:var(--color-primary)}
+.faq-icon{flex-shrink:0;width:20px;height:20px;color:var(--color-primary);opacity:0.75}
+.faq-q-text{flex:1}
 .faq-toggle{flex-shrink:0;width:30px;height:30px;border:2px solid var(--color-border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--color-body);transition:transform var(--transition)}
 .faq-item.open .faq-toggle{background:var(--color-primary);border-color:var(--color-primary);color:#fff;transform:rotate(45deg)}
-.faq-answer{display:none;padding:0 0 24px;color:rgba(26,26,46,0.7);font-size:14px;line-height:1.8}
+.faq-answer{display:none;padding:0 0 24px 32px;color:rgba(26,26,46,0.7);font-size:14px;line-height:1.8}
 .faq-item.open .faq-answer{display:block}
+.faq-proof{background:#FFFFFF;border:1px solid #D8EAD8;border-radius:12px;padding:24px 28px;margin:0 0 32px;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
+.faq-proof p{font-size:15px;font-style:italic;color:var(--color-body);margin:0 0 10px;line-height:1.7}
+.faq-proof-meta{font-size:12px;color:rgba(26,26,46,0.5);text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+.faq-proof-stars{color:#FFD700;margin-right:6px;font-style:normal}
+.faq-footer-nudge{margin-top:14px;font-size:14px;color:rgba(26,26,46,0.5)}
+.faq-footer-nudge a{color:var(--color-primary);font-weight:600;text-decoration:none}
+.faq-footer-nudge a:hover{text-decoration:underline}
 .dropdown-menu--locations{min-width:460px}
 .dropdown-cities{display:grid;grid-template-columns:1fr 1fr 1fr}
 .dropdown-cities a{border-bottom:none}
@@ -1094,35 +1104,67 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
         <span class="eyebrow-text eyebrow-text--green">Common Questions</span>
         <span class="eyebrow-line eyebrow-line--green"></span>
       </div>
-      <h2 class="section-heading">Frequently Asked Questions</h2>
+      <h2 class="section-heading">Real Answers. No Runaround.</h2>
       <div class="section-heading-accent centered"></div>
+      <p class="faq-intro">27 years in, the questions are pretty predictable. Here&rsquo;s what Brendan hears most &mdash; and the straight answers.</p>
       <div class="faq-list">
         <div class="faq-item">
-          <div class="faq-question">How much does junk removal cost on Long Island? <span class="faq-toggle">+</span></div>
+          <div class="faq-question">
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span class="faq-q-text">How much does junk removal cost on Long Island?</span>
+            <span class="faq-toggle">+</span>
+          </div>
           <div class="faq-answer">Pricing depends on the volume and type of items. Most residential loads run from around $150 for a single item to $400&ndash;$700 for a full truck. Brendan always gives you a free, no-obligation on-site quote before any work begins &mdash; what he quotes is what you pay. No games. Call <a href="tel:6318486762" style="color:#1C6E1C;font-weight:600;">(631) 848-6762</a> to get started.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">Do you offer same-day junk removal? <span class="faq-toggle">+</span></div>
+          <div class="faq-question">
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="faq-q-text">Do you offer same-day junk removal?</span>
+            <span class="faq-toggle">+</span>
+          </div>
           <div class="faq-answer">Yes &mdash; same-day service is available in most areas. Brendan has been known to arrive within minutes of a call. We&rsquo;re open 7 days a week, 7:00 AM &ndash; 6:00 PM. Call <a href="tel:6318486762" style="color:#1C6E1C;font-weight:600;">(631) 848-6762</a> and we&rsquo;ll do everything we can to get out to you today.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">What areas of Long Island do you serve? <span class="faq-toggle">+</span></div>
+          <div class="faq-question">
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="faq-q-text">What areas of Long Island do you serve?</span>
+            <span class="faq-toggle">+</span>
+          </div>
           <div class="faq-answer">We cover <strong>Suffolk County</strong> on Long Island&rsquo;s South Shore and <strong>Nassau County</strong>. Towns we regularly serve in Suffolk include Sayville, Bayport, Bay Shore, Islip, East Islip, West Islip, Oakdale, Bohemia, Patchogue, Holbrook, Brookhaven, Ronkonkoma, Hauppauge, and Smithtown &mdash; plus East Meadow and surrounding Nassau County towns. Not sure if we reach you? Call <a href="tel:6318486762" style="color:#1C6E1C;font-weight:600;">(631) 848-6762</a> &mdash; we&rsquo;ll tell you on the spot.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">What types of items do you haul away? <span class="faq-toggle">+</span></div>
+          <div class="faq-question">
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <span class="faq-q-text">What types of items do you haul away?</span>
+            <span class="faq-toggle">+</span>
+          </div>
           <div class="faq-answer">We remove furniture, sofas, mattresses, appliances, refrigerators, washers and dryers, hot tubs, sheds, construction debris, garage and basement clutter, estate contents, storage unit contents, and much more. We do not haul hazardous materials, chemicals, or biohazardous waste.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">Do you donate or recycle before disposing? <span class="faq-toggle">+</span></div>
+          <div class="faq-question">
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            <span class="faq-q-text">Do you donate or recycle before disposing?</span>
+            <span class="faq-toggle">+</span>
+          </div>
           <div class="faq-answer">Always. Brendan&rsquo;s process is: donate first (Habitat for Humanity), recycle second, dispose as a last resort. Multiple customers have noted him going out of his way to find a donation home for items rather than sending them to the landfill &mdash; that&rsquo;s not a marketing claim, it&rsquo;s in the reviews.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">Can you handle estate cleanouts and full property clearouts? <span class="faq-toggle">+</span></div>
+          <div class="faq-question">
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span class="faq-q-text">Can you handle estate cleanouts and full property clearouts?</span>
+            <span class="faq-toggle">+</span>
+          </div>
           <div class="faq-answer">Estate cleanouts are one of Brendan&rsquo;s specialties. He handles the entire property &mdash; attics, basements, every room &mdash; with care and without judgment. He is trusted with house keys by out-of-state clients and known for setting aside heirlooms that might otherwise be overlooked. This is exactly the kind of job he takes on.</div>
         </div>
       </div>
+      <div class="faq-proof">
+        <p>&ldquo;I reached out to him at 11am and the job was done by 4pm the same day. I GUARANTEE you will not regret hiring him.&rdquo;</p>
+        <div class="faq-proof-meta">
+          <span class="faq-proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>Michelle D. &middot; Google Review
+        </div>
+      </div>
       <a href="faq.html" class="btn-primary">See All FAQs &rarr;</a>
+      <p class="faq-footer-nudge">Still not sure? <a href="tel:6318486762">Call Brendan direct</a> &mdash; he picks up.</p>
     </div>
   </section>
 
