@@ -238,15 +238,14 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .cta-band-eyebrow-line{width:32px;height:1px;background:#1C6E1C;opacity:0.7}
 .cta-band-eyebrow span{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:#1C6E1C}
 .cta-band-purple h2{font-family:var(--font-heading);font-size:clamp(32px,4.5vw,56px);font-weight:800;text-transform:uppercase;color:#111;margin-bottom:16px;letter-spacing:1px}
-.cta-band-phone{display:block;font-family:var(--font-heading);font-weight:800;color:#1C6E1C;line-height:1;letter-spacing:-2px;margin-bottom:6px;transition:color var(--transition);font-size:clamp(48px,8vw,88px)}
-.cta-band-phone:hover{color:#0E5010}
-.cta-band-tap{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(0,0,0,0.5);margin-bottom:28px;display:block}
-.cta-trust-chips{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.cta-band-phone{display:inline-flex;flex-direction:column;align-items:center;font-family:var(--font-heading);font-weight:800;color:#1C6E1C;line-height:1;letter-spacing:-2px;margin-bottom:0;transition:all var(--transition);font-size:clamp(40px,7vw,80px);background:#FFFFFF;padding:24px 56px 20px;border-radius:120px;box-shadow:0 4px 24px rgba(0,0,0,0.12)}
+.cta-band-phone:hover{background:#F0F0F0;color:#0E5010;transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,0.16)}
+.cta-band-tap{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(28,110,28,0.6);margin-top:6px;display:block}
+.cta-trust-chips{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;margin-bottom:32px}
 .trust-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(28,110,28,0.1);border:1px solid rgba(28,110,28,0.25);border-radius:100px;padding:7px 15px;color:#1C6E1C;font-size:13px;font-weight:600}
 .trust-chip svg{color:#1C6E1C;flex-shrink:0}
-.cta-band-stars{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:32px}
-.cta-band-stars-glyphs{color:#1C6E1C;letter-spacing:4px;font-size:18px}
-.cta-band-stars-label{color:rgba(0,0,0,0.6);font-size:14px;font-weight:600}
+.cta-band-secondary{display:block;margin-top:28px;font-size:14px;color:rgba(0,0,0,0.5);font-weight:600;text-decoration:none;transition:color var(--transition)}
+.cta-band-secondary:hover{color:#1C6E1C}
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:2000;align-items:center;justify-content:center;padding:20px}
 .modal-overlay.open{display:flex}
 .modal-card{background:var(--color-white);border-radius:10px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;overflow-x:hidden;position:relative;box-shadow:0 24px 64px rgba(0,0,0,0.45)}
@@ -1193,8 +1192,6 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
         <span class="cta-band-eyebrow-line"></span>
       </div>
       <h2>Call Brendan Direct.</h2>
-      <a href="tel:6318486762" class="cta-band-phone">(631) 848-6762</a>
-      <span class="cta-band-tap">Tap to call &middot; He picks up</span>
       <div class="cta-trust-chips">
         <div class="trust-chip">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -1209,14 +1206,11 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
           No surprise fees
         </div>
       </div>
-      <div class="cta-band-stars">
-        <span class="cta-band-stars-glyphs">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span class="cta-band-stars-label">5.0 &middot; 215 Google Reviews</span>
-      </div>
-      <a href="contact.html" class="btn-primary" data-modal="quote" style="font-family:var(--font-heading);font-size:18px;letter-spacing:2px;padding:20px 52px;">
-        Get a Free Quote
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline;vertical-align:-2px;margin-left:10px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      <a href="tel:6318486762" class="cta-band-phone">
+        (631) 848-6762
+        <span class="cta-band-tap">Tap to call &middot; He picks up</span>
       </a>
+      <a href="contact.html" class="cta-band-secondary" data-modal="quote">Prefer a written quote? &rarr;</a>
     </div>
   </div>
 
