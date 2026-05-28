@@ -97,23 +97,14 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .eyebrow-text{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px}
 .eyebrow-text--green{color:#1C6E1C}
 .eyebrow-text--yellow{color:#FFD700}
-.sf-section{background:#111c11;padding:36px 32px 80px;border-top:1px solid rgba(255,255,255,0.06);position:relative}
+.sf-section{background:#111c11;padding:56px 32px 64px;border-top:1px solid rgba(255,255,255,0.06);position:relative}
 .sf-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent 0%,#ffffff 100%);pointer-events:none;z-index:2}
-.sf-inner{max-width:900px;margin:0 auto}
-.sf-heading{font-family:var(--font-heading);font-size:clamp(52px,7vw,86px);font-weight:800;text-transform:uppercase;color:#F5F5F0;line-height:1;margin-bottom:40px}
+.sf-inner{max-width:720px;margin:0 auto}
+.sf-heading{font-family:var(--font-heading);font-size:clamp(52px,7vw,86px);font-weight:800;text-transform:uppercase;color:#F5F5F0;line-height:1;margin-bottom:32px}
 .sf-heading span{color:var(--color-primary)}
-.sf-section .eyebrow-text--green{color:rgba(168,181,168,0.55)}
-.sf-section .eyebrow-line--green{background:rgba(168,181,168,0.2)}
-.sf-list{border-top:1px solid rgba(255,255,255,0.08);list-style:none}
-.sf-item{display:block;padding:36px 0;border-bottom:1px solid rgba(255,255,255,0.06);background:transparent}
-.sf-icon-col{display:none}
-.sf-scene-icon{display:none}
-.sf-num-small{display:none}
-.sf-item h3{font-family:var(--font-heading);font-size:clamp(22px,3vw,36px);font-weight:800;text-transform:uppercase;color:#F5F5F0;margin-bottom:10px;line-height:1.15}
-.sf-item p{color:rgba(200,215,200,0.65);font-size:15px;line-height:1.75;margin:0;max-width:720px}
-.sf-x{display:none}
-.sf-footer{display:flex;align-items:center;justify-content:center;gap:14px;padding:44px 0 16px;border-top:1px solid rgba(255,215,0,0.25);margin-top:8px}
-.sf-footer-text{font-family:var(--font-heading);font-size:clamp(22px,2.8vw,34px);font-weight:800;text-transform:uppercase;color:#FFD700;letter-spacing:0.08em}
+.sf-body{font-size:clamp(17px,1.8vw,21px);color:rgba(215,228,215,0.8);line-height:1.7;margin-bottom:20px}
+.sf-footer{display:flex;align-items:center;justify-content:flex-start;gap:14px;padding:32px 0 16px;border-top:1px solid rgba(255,215,0,0.2);margin-top:12px}
+.sf-footer-text{font-family:var(--font-heading);font-size:clamp(20px,2.4vw,28px);font-weight:800;text-transform:uppercase;color:#FFD700;letter-spacing:0.06em}
 .ref-section{background:#f9f7f2;padding:96px 32px}
 .ref-inner{max-width:1100px;margin:0 auto}
 .ref-eyebrow-text{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#2d5a2d;text-align:center;margin-bottom:52px}
@@ -656,41 +647,8 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
   <section class="sf-section">
     <div class="sf-inner">
       <h2 class="sf-heading">Sound Familiar<span>?</span></h2>
-      <ol class="sf-list" aria-label="Common frustrations with other junk removal companies">
-        <li class="sf-item" data-reveal>
-          <div class="sf-icon-col" aria-hidden="true">
-            <svg class="sf-scene-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span class="sf-num-small">01</span>
-          </div>
-          <div>
-            <h3>Scheduled It &mdash; Nobody Showed</h3>
-            <p>You cleared an afternoon, moved stuff aside, stayed home. No call. No show. You found out it wasn&rsquo;t happening when you called them &mdash; if they even picked up.</p>
-          </div>
-          <span class="sf-x" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
-        </li>
-        <li class="sf-item" data-reveal data-reveal-delay="100">
-          <div class="sf-icon-col" aria-hidden="true">
-            <svg class="sf-scene-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            <span class="sf-num-small">02</span>
-          </div>
-          <div>
-            <h3>Quoted One Price, Charged Another</h3>
-            <p>The phone quote sounded reasonable. Then the truck pulls up and suddenly there are extra charges &mdash; the stairs, the weight, the distance, whatever they can add. You didn&rsquo;t budget for that gap.</p>
-          </div>
-          <span class="sf-x" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
-        </li>
-        <li class="sf-item" data-reveal data-reveal-delay="200">
-          <div class="sf-icon-col" aria-hidden="true">
-            <svg class="sf-scene-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="18" y1="8" x2="23" y2="13"/><line x1="23" y1="8" x2="18" y2="13"/></svg>
-            <span class="sf-num-small">03</span>
-          </div>
-          <div>
-            <h3>The Job Was &ldquo;Too Big&rdquo; or &ldquo;Too Complicated&rdquo;</h3>
-            <p>The refrigerator up a narrow staircase. The hot tub wedged against the fence. The basement nobody wants to touch. You call around and everybody has a reason it&rsquo;s not for them. The job just sits.</p>
-          </div>
-          <span class="sf-x" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
-        </li>
-      </ol>
+      <p class="sf-body">You blocked off the afternoon. They didn&rsquo;t show &mdash; no call, nothing. Or they showed up and the price was suddenly different from what you were quoted. Or they took one look at the hot tub, the refrigerator, the basement full of stuff &mdash; and had a reason to pass.</p>
+      <p class="sf-body">It happens so often on Long Island that customers apologize when they call Brendan. For assuming he&rsquo;d be like the others.</p>
       <div class="sf-footer">
         <span class="sf-footer-text">We fix all three. Every time.</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
