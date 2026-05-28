@@ -334,7 +334,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
   .hero-buttons .btn-primary,.hero-buttons .btn-ghost{text-align:center}
 }
 .ba-section{background:#fff;padding:64px 32px;border-top:1px solid #D8EAD8;position:relative}
-.ba-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent 0%,#2db82d 100%);pointer-events:none;z-index:1}
+.ba-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent 0%,#FFE040 100%);pointer-events:none;z-index:1}
 .ba-inner{max-width:1100px;margin:0 auto}
 .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
 .ba-pair{border-radius:6px;overflow:hidden;border:1px solid rgba(17,17,17,0.08);box-shadow:0 4px 16px rgba(0,0,0,0.07)}
@@ -383,6 +383,62 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .eco-callout-stars{color:#FFD700;font-size:13px;letter-spacing:2px;flex-shrink:0}
 .eco-callout-attr{color:rgba(255,255,255,0.55);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;font-style:normal}
 @media(max-width:768px){.ba-grid{grid-template-columns:1fr}.eco-pillars{grid-template-columns:1fr;gap:16px}.eco-callout{padding:16px 20px}}
+/* PARTNER TRUST BAR */
+.partner-trust-bar{background:#f5f7f5;border-bottom:1px solid #D8EAD8;padding:14px 32px;display:flex;align-items:center;gap:20px;overflow:hidden}
+.partner-trust-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#888;white-space:nowrap;flex-shrink:0}
+.partner-ticker-wrap{flex:1;overflow:hidden;mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,black 5%,black 95%,transparent)}
+.partner-ticker-track{display:flex;align-items:center;gap:40px;width:max-content;animation:scroll-left 28s linear infinite;padding:4px 0}
+.partner-ticker-track img{height:36px;width:auto;display:block;flex-shrink:0;opacity:0.55;filter:grayscale(1);transition:opacity 0.2s,filter 0.2s}
+.partner-ticker-track img:hover{opacity:0.85;filter:grayscale(0)}
+/* MERGED HOW IT WORKS */
+.combined-hiw{background:linear-gradient(to bottom,#FFE040 0%,#FFF8B0 100%);padding:64px 32px;position:relative;overflow:hidden;border-top:none}
+.combined-hiw-dotgrid{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,0,0,0.06) 1px,transparent 1px);background-size:32px 32px;opacity:0.4;pointer-events:none}
+.combined-hiw-inner{max-width:900px;margin:0 auto;text-align:center;position:relative}
+.combined-hiw h2{font-family:var(--font-heading);font-size:clamp(28px,3.5vw,44px);font-weight:800;color:#111;margin-bottom:12px;text-shadow:0 2px 6px rgba(0,0,0,0.10)}
+.combined-hiw-accent{width:56px;height:4px;background:#1C6E1C;border-radius:9px;margin:0 auto 40px}
+.process-compact{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:0;margin-bottom:40px}
+.process-step{display:flex;flex-direction:column;align-items:center;padding:20px 16px;background:rgba(255,255,255,0.65);border-radius:8px;border:1px solid rgba(28,110,28,0.12)}
+.process-step-icon{width:44px;height:44px;background:#1C6E1C;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;flex-shrink:0}
+.process-step strong{font-family:var(--font-heading);font-size:18px;font-weight:800;color:#111;text-transform:uppercase;margin-bottom:6px;display:block}
+.process-step p{font-size:13px;color:rgba(17,17,17,0.65);line-height:1.6;margin:0}
+.process-arrow{font-size:22px;color:#1C6E1C;font-weight:700;padding:0 8px;flex-shrink:0}
+.hiw-transition{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(17,17,17,0.5);margin:0 0 28px;display:flex;align-items:center;justify-content:center;gap:12px}
+.hiw-transition::before,.hiw-transition::after{content:'';flex:1;max-width:60px;height:1px;background:rgba(17,17,17,0.2)}
+.disposal-compact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:36px}
+.disposal-col{background:#1C6E1C;border-radius:8px;padding:24px 16px;border:1px solid rgba(255,255,255,0.1);text-align:center}
+.disposal-col svg{display:block;margin:0 auto 10px}
+.disposal-col strong{font-family:var(--font-heading);font-size:16px;font-weight:800;color:#FFD700;text-transform:uppercase;display:block;margin-bottom:8px}
+.disposal-col p{color:rgba(255,255,255,0.88);font-size:13px;line-height:1.6;margin:0}
+.combined-callout{max-width:700px;margin:0 auto;border-left:3px solid rgba(28,110,28,0.5);padding:20px 24px;background:rgba(255,255,255,0.55);border-radius:0 6px 6px 0;text-align:left}
+.combined-callout p{color:rgba(17,17,17,0.8);font-size:15px;line-height:1.8;margin:0;font-style:italic}
+.combined-callout-meta{display:flex;align-items:center;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(17,17,17,0.1)}
+.combined-callout-stars{color:#C8A84B;font-size:13px;letter-spacing:2px;flex-shrink:0}
+.combined-callout-attr{color:rgba(17,17,17,0.5);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px}
+.combined-hiw-cta{margin-top:40px}
+@media(max-width:768px){.process-compact{grid-template-columns:1fr;gap:8px}.process-arrow{display:none}.disposal-compact{grid-template-columns:1fr;gap:12px}}
+/* REVIEWS — 3-COLUMN GRID */
+.rw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
+.rw-grid-card{border-radius:6px;padding:28px;background:#fff;border:1px solid rgba(17,17,17,0.08);border-left:3px solid #1C6E1C;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;flex-direction:column}
+.rw-grid-card .rw-card-text{flex:1}
+@media(max-width:768px){.rw-grid{grid-template-columns:1fr}}
+/* GOOGLE BADGE */
+.google-review-badge{display:inline-flex;align-items:center;gap:14px;background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:14px 20px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:36px}
+.google-badge-g{width:32px;height:32px;flex-shrink:0}
+.google-badge-info{text-align:left}
+.google-badge-score-row{display:flex;align-items:baseline;gap:8px}
+.google-badge-score{font-family:var(--font-heading);font-size:28px;font-weight:800;color:#1a1a1a;line-height:1}
+.google-badge-stars{color:#FBBC05;font-size:18px;letter-spacing:2px;line-height:1}
+.google-badge-label{display:block;font-size:11px;color:#888;font-weight:500;margin-top:2px}
+/* LOCATIONS — COMMA LIST */
+.location-list{font-size:15px;color:rgba(17,17,17,0.7);line-height:1.9;margin-top:20px;margin-bottom:28px}
+/* STICKY MOBILE CTA BAR */
+.sticky-mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:990;background:#1C6E1C;border-top:3px solid #FFD700;padding:10px 16px;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 -4px 16px rgba(0,0,0,0.2)}
+@media(max-width:768px){.sticky-mobile-cta{display:flex};body{padding-bottom:64px}}
+.sticky-mobile-call{display:flex;flex-direction:column;line-height:1.2;text-decoration:none}
+.sticky-mobile-call .call-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.75)}
+.sticky-mobile-call .call-number{font-family:var(--font-heading);font-size:18px;font-weight:800;color:#FFD700}
+.sticky-cta-btn{background:#FFD700;color:#111;font-family:var(--font-heading);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:0.5px;padding:10px 20px;border-radius:4px;white-space:nowrap;text-decoration:none;flex-shrink:0}
+.sticky-cta-btn:hover{background:#e6c200}
 </style>
 <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="css/style.css"></noscript>
@@ -567,6 +623,31 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
     </div>
   </section>
 
+  <!-- 2a. PARTNER TRUST BAR -->
+  <div class="partner-trust-bar" role="region" aria-label="Trusted by Long Island professionals">
+    <span class="partner-trust-label">Trusted by Long Island professionals</span>
+    <div class="partner-ticker-wrap">
+      <div class="partner-ticker-track">
+        <img src="images/partner-public-storage.png" alt="Public Storage" loading="lazy">
+        <img src="images/partner-cubesmart.png" alt="CubeSmart Self Storage" loading="lazy">
+        <img src="images/partner-prime-storage.jpg" alt="Prime Storage" loading="lazy">
+        <img src="images/partner-li-ducks.png" alt="Long Island Ducks" loading="lazy">
+        <img src="images/artboard-1.png" alt="Century 21" loading="lazy">
+        <img src="images/artboard-4.png" alt="Prudential Real Estate" loading="lazy">
+        <img src="images/artboard-2.png" alt="RealtyConnect USA" loading="lazy">
+        <img src="images/artboard-3.png" alt="Douglas Elliman" loading="lazy">
+        <img src="images/partner-public-storage.png" alt="" loading="lazy" aria-hidden="true">
+        <img src="images/partner-cubesmart.png" alt="" loading="lazy" aria-hidden="true">
+        <img src="images/partner-prime-storage.jpg" alt="" loading="lazy" aria-hidden="true">
+        <img src="images/partner-li-ducks.png" alt="" loading="lazy" aria-hidden="true">
+        <img src="images/artboard-1.png" alt="" loading="lazy" aria-hidden="true">
+        <img src="images/artboard-4.png" alt="" loading="lazy" aria-hidden="true">
+        <img src="images/artboard-2.png" alt="" loading="lazy" aria-hidden="true">
+        <img src="images/artboard-3.png" alt="" loading="lazy" aria-hidden="true">
+      </div>
+    </div>
+  </div>
+
   <!-- 2. TRUST TICKER -->
   <div class="trust-ticker" role="region" aria-label="Why choose Integrity Hauling">
     <div class="trust-ticker-wrap">
@@ -737,38 +818,6 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
         <span class="ref-stat-text">27 Years &middot; 100+ Professional Referral Partners &middot; Long Island, NY</span>
       </div>
 
-      <div class="ref-logos">
-        <div>
-          <p class="ref-logo-group-label">Long Island Storage Facilities</p>
-          <div class="ref-ticker-container">
-            <div class="ref-ticker-track ref-ticker-track--left">
-              <img src="images/partner-public-storage.png" alt="Public Storage" loading="lazy">
-              <img src="images/partner-cubesmart.png" alt="CubeSmart Self Storage" loading="lazy">
-              <img src="images/partner-prime-storage.jpg" alt="Prime Storage" loading="lazy">
-              <img src="images/partner-li-ducks.png" alt="Long Island Ducks" loading="lazy">
-              <img src="images/partner-public-storage.png" alt="" loading="lazy" aria-hidden="true">
-              <img src="images/partner-cubesmart.png" alt="" loading="lazy" aria-hidden="true">
-              <img src="images/partner-prime-storage.jpg" alt="" loading="lazy" aria-hidden="true">
-              <img src="images/partner-li-ducks.png" alt="" loading="lazy" aria-hidden="true">
-            </div>
-          </div>
-        </div>
-        <div>
-          <p class="ref-logo-group-label">Long Island Real Estate Agencies</p>
-          <div class="ref-ticker-container">
-            <div class="ref-ticker-track ref-ticker-track--right">
-              <img src="images/artboard-1.png" alt="Century 21" loading="lazy">
-              <img src="images/artboard-4.png" alt="Prudential Real Estate" loading="lazy">
-              <img src="images/artboard-2.png" alt="RealtyConnect USA" loading="lazy">
-              <img src="images/artboard-3.png" alt="Douglas Elliman" loading="lazy">
-              <img src="images/artboard-1.png" alt="" loading="lazy" aria-hidden="true">
-              <img src="images/artboard-4.png" alt="" loading="lazy" aria-hidden="true">
-              <img src="images/artboard-2.png" alt="" loading="lazy" aria-hidden="true">
-              <img src="images/artboard-3.png" alt="" loading="lazy" aria-hidden="true">
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -915,81 +964,73 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
     </div>
   </section>
 
-  <!-- 5c. ECO-FRIENDLY -->
-  <section class="eco-section">
-    <div class="eco-inner">
-      <div class="eyebrow-row">
-        <span class="eyebrow-line eyebrow-line--yellow"></span>
-        <span class="eyebrow-text eyebrow-text--yellow">Where It Actually Goes</span>
-        <span class="eyebrow-line eyebrow-line--yellow"></span>
-      </div>
-      <h2>We Don&rsquo;t Just Haul It Away.</h2>
-      <div class="eco-accent"></div>
-      <div class="eco-pillars">
-        <div class="eco-pillar" data-reveal>
-          <span class="eco-step-num" aria-hidden="true">01</span>
-          <svg class="eco-pillar-icon eco-icon-bounce" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          <h3>Donate First</h3>
-          <p>Your mom&rsquo;s dining set. The kids&rsquo; bikes in the attic. If it&rsquo;s still usable, it goes to Habitat for Humanity &mdash; not a landfill. Brendan doesn&rsquo;t dump what someone else could use.</p>
-        </div>
-        <div class="eco-pillar" data-reveal data-reveal-delay="150">
-          <span class="eco-step-num" aria-hidden="true">02</span>
-          <svg class="eco-pillar-icon eco-icon-spin" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-          <h3>Recycle Second</h3>
-          <p>Old appliances, scrap metal, electronics &mdash; sorted and sent to the right facilities. Nothing recyclable gets dumped because it&rsquo;s easier. It doesn&rsquo;t work that way.</p>
-        </div>
-        <div class="eco-pillar" data-reveal data-reveal-delay="300">
-          <span class="eco-step-num" aria-hidden="true">03</span>
-          <svg class="eco-pillar-icon eco-icon-sway" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
-          <h3>Landfill Last</h3>
-          <p>Only what genuinely can&rsquo;t be reused or recycled goes to the landfill. That&rsquo;s it. Brendan&rsquo;s operated this way for 27 years &mdash; not because it&rsquo;s trendy, but because it&rsquo;s right.</p>
-        </div>
-      </div>
-      <div class="eco-callout" data-reveal data-reveal-delay="200">
-        <p>&ldquo;He was able to recycle and donate some of the stuff we couldn&rsquo;t keep &mdash; which was nice because it was in good condition and I would&rsquo;ve hated for it to have been trashed.&rdquo;</p>
-        <div class="eco-callout-meta">
-          <span class="eco-callout-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span class="eco-callout-attr">John P. &middot; Google Review</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. HOW IT WORKS -->
-  <section class="hiw-section">
-    <div class="hiw-dotgrid"></div>
-    <div class="hiw-inner">
+  <!-- 5c + 6. HOW IT WORKS (merged) -->
+  <section class="combined-hiw">
+    <div class="combined-hiw-dotgrid" aria-hidden="true"></div>
+    <div class="combined-hiw-inner">
       <div class="eyebrow-row">
         <span class="eyebrow-line eyebrow-line--green"></span>
         <span class="eyebrow-text eyebrow-text--green">No Pressure. No Surprises.</span>
         <span class="eyebrow-line eyebrow-line--green"></span>
       </div>
       <h2>How It Works</h2>
-      <div class="hiw-accent"></div>
+      <div class="combined-hiw-accent"></div>
 
-      <div class="hiw-steps">
-        <div class="hiw-connector" aria-hidden="true"></div>
-
-        <div class="hiw-step" data-reveal>
-          <div class="hiw-circle"><span>01</span></div>
-          <h3>Call Brendan</h3>
+      <div class="process-compact">
+        <div class="process-step" data-reveal>
+          <div class="process-step-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <strong>Call Brendan</strong>
           <p>He picks up. <a href="tel:6318486762" style="color:#1C6E1C;font-weight:700;">(631) 848-6762</a> &mdash; real person, every time.</p>
         </div>
-
-        <div class="hiw-step" data-reveal data-reveal-delay="150">
-          <div class="hiw-circle"><span>02</span></div>
-          <h3>You Approve It</h3>
-          <p>Free estimate on-site. You approve it before anything moves &mdash; no surprises, no pressure.</p>
+        <div class="process-arrow" aria-hidden="true">&rarr;</div>
+        <div class="process-step" data-reveal data-reveal-delay="150">
+          <div class="process-step-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <strong>You Approve It</strong>
+          <p>Free estimate on-site. You approve before anything moves &mdash; no surprises, no pressure.</p>
         </div>
-
-        <div class="hiw-step" data-reveal data-reveal-delay="300">
-          <div class="hiw-circle"><span>03</span></div>
-          <h3>It&rsquo;s Gone</h3>
-          <p>Same day, most jobs. Brendan loads it out and sweeps up after. You&rsquo;re done.</p>
+        <div class="process-arrow" aria-hidden="true">&rarr;</div>
+        <div class="process-step" data-reveal data-reveal-delay="300">
+          <div class="process-step-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <strong>It&rsquo;s Gone</strong>
+          <p>Same day, most jobs. Brendan loads it out, sweeps up after. You&rsquo;re done.</p>
         </div>
       </div>
 
-      <div class="hiw-cta">
+      <p class="hiw-transition">And here&rsquo;s where it actually goes:</p>
+
+      <div class="disposal-compact">
+        <div class="disposal-col" data-reveal>
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <strong>Donate First</strong>
+          <p>Usable items go to Habitat for Humanity &mdash; not a landfill.</p>
+        </div>
+        <div class="disposal-col" data-reveal data-reveal-delay="150">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          <strong>Recycle Second</strong>
+          <p>Appliances, metal, electronics &mdash; sorted and sent to the right facilities.</p>
+        </div>
+        <div class="disposal-col" data-reveal data-reveal-delay="300">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          <strong>Landfill Last</strong>
+          <p>Only what truly can&rsquo;t be reused or recycled gets disposed.</p>
+        </div>
+      </div>
+
+      <div class="combined-callout" data-reveal data-reveal-delay="200">
+        <p>&ldquo;He was able to recycle and donate some of the stuff we couldn&rsquo;t keep &mdash; which was nice because it was in good condition and I would&rsquo;ve hated for it to have been trashed.&rdquo;</p>
+        <div class="combined-callout-meta">
+          <span class="combined-callout-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="combined-callout-attr">John P. &middot; Google Review</span>
+        </div>
+      </div>
+
+      <div class="combined-hiw-cta">
         <a href="contact.html" class="btn-primary" data-modal="quote">GET MY FREE QUOTE</a>
       </div>
     </div>
@@ -1006,65 +1047,66 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
       <h2>215 People. One Thing in Common.</h2>
       <div class="rw-accent"></div>
 
-      <div class="rw-pullquote" data-reveal>
-        <span class="rw-pq-mark" aria-hidden="true">&ldquo;</span>
-        <p class="rw-pq-text">We had a death in the family and needed to have an entire house completely emptied. I have no idea how we would have done it without Integrity Hauling.</p>
-        <footer>
-          <span class="rw-pq-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <strong class="rw-pq-author">Michael W. &middot; Google Review &middot; Long Island, NY</strong>
-        </footer>
+      <div style="text-align:center;">
+        <div class="google-review-badge">
+          <svg class="google-badge-g" viewBox="0 0 48 48" role="img" aria-label="Google"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <div class="google-badge-info">
+            <div class="google-badge-score-row">
+              <span class="google-badge-score">5.0</span>
+              <span class="google-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <span class="google-badge-label">on Google &middot; 215 Reviews</span>
+          </div>
+        </div>
       </div>
 
-      <div class="rw-cards-top">
+      <div class="rw-grid">
 
-        <div class="rw-card" data-reveal>
+        <div class="rw-grid-card" data-reveal>
           <div class="rw-card-platform">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             <span>Google Review</span>
           </div>
-          <p class="rw-card-headline">Finally a Service Provider That Answers the Phone and Returns Calls</p>
           <span class="rw-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p class="rw-card-text">Every other company &mdash; voicemail. Brendan picked up on the first ring.</p>
+          <p class="rw-card-text">&ldquo;We had a death in the family and needed to have an entire house completely emptied. I have no idea how we would have done it without Integrity Hauling.&rdquo;</p>
+          <div class="rw-card-author">
+            <strong>Michael W.</strong>
+            <span>Google Review &middot; Long Island, NY</span>
+          </div>
+        </div>
+
+        <div class="rw-grid-card" data-reveal data-reveal-delay="120">
+          <div class="rw-card-platform">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            <span>Google Review</span>
+          </div>
+          <span class="rw-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p class="rw-card-text">&ldquo;Every other company &mdash; voicemail. Brendan picked up on the first ring. Finally a service provider that answers the phone and returns calls, keeps appointments, and provides excellent service.&rdquo;</p>
           <div class="rw-card-author">
             <strong>Gary E.</strong>
             <span>Google Review &middot; Long Island, NY</span>
           </div>
         </div>
 
-        <div class="rw-card" data-reveal data-reveal-delay="120">
+        <div class="rw-grid-card" data-reveal data-reveal-delay="240">
           <div class="rw-card-platform">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             <span>Google Review</span>
           </div>
-          <p class="rw-card-headline">Your Company Is Truly Named Appropriately &mdash; Integrity Is a Rare Commodity</p>
           <span class="rw-card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p class="rw-card-text">&ldquo;Your company is truly named appropriately as Integrity is a rare commodity. Brendan is my go-to person &mdash; his prices are fair, he always does great work, ALWAYS calls back and is very reliable. All of my clients love him!&rdquo;</p>
+          <p class="rw-card-text">&ldquo;I reached out to him at 11am and the job was done by 4pm the same day. I GUARANTEE you will not regret hiring him.&rdquo;</p>
           <div class="rw-card-author">
-            <strong>Debra C. &middot; Keller Williams Realty Elite</strong>
-            <span>Google Review &middot; East Islip, NY</span>
+            <strong>Michelle D.</strong>
+            <span>Google Review &middot; Long Island, NY</span>
           </div>
         </div>
 
-      </div>
-
-      <div class="rw-card-supporting" data-reveal>
-        <div class="rw-card-platform">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:13px;height:13px;"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-          <span>Google Review</span>
-        </div>
-        <p class="rw-card-headline">Reached Out at 11am. Job Done by 4pm the Same Day.</p>
-        <span class="rw-card-stars" style="font-size:14px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <p class="rw-card-text" style="font-size:14px;">&ldquo;I reached out to him at 11am and the job was done by 4pm the same day. I GUARANTEE you will not regret hiring him.&rdquo;</p>
-        <div class="rw-card-author">
-          <strong>Michelle D.</strong>
-          <span>Google Review &middot; Long Island, NY</span>
-        </div>
       </div>
 
       <div class="rw-footer">
         <span class="rw-footer-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p class="rw-footer-text">5.0 Star Average &middot; 215 Google Reviews &middot; 100% Five Stars</p>
-        <a href="https://www.google.com/maps/search/Integrity+Hauling+LLC+Sayville+NY" target="_blank" rel="noopener" class="btn-primary">Read All 215 Reviews &rarr;</a>
+        <a href="https://www.google.com/maps/place/Integrity+Hauling" target="_blank" rel="noopener" class="btn-primary">Read All 215 Reviews &rarr;</a>
       </div>
     </div>
   </section>
@@ -1120,24 +1162,8 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
       </div>
       <h2 class="section-heading">Serving Long Island, NY</h2>
       <div class="section-heading-accent centered"></div>
-      <div class="location-pills">
-        <a href="sayville.html" class="location-pill">Sayville NY</a>
-        <a href="bayport.html" class="location-pill">Bayport NY</a>
-        <a href="bay-shore.html" class="location-pill">Bay Shore NY</a>
-        <a href="islip.html" class="location-pill">Islip NY</a>
-        <a href="east-islip.html" class="location-pill">East Islip NY</a>
-        <a href="west-islip.html" class="location-pill">West Islip NY</a>
-        <a href="oakdale.html" class="location-pill">Oakdale NY</a>
-        <a href="bohemia.html" class="location-pill">Bohemia NY</a>
-        <a href="patchogue.html" class="location-pill">Patchogue NY</a>
-        <a href="holbrook.html" class="location-pill">Holbrook NY</a>
-        <a href="brookhaven.html" class="location-pill">Brookhaven NY</a>
-        <a href="ronkonkoma.html" class="location-pill">Ronkonkoma NY</a>
-        <a href="hauppauge.html" class="location-pill">Hauppauge NY</a>
-        <a href="smithtown.html" class="location-pill">Smithtown NY</a>
-        <a href="east-meadow.html" class="location-pill">East Meadow NY</a>
-        <a href="service-areas.html" class="location-pill location-pill--cta">View All Service Areas &rarr;</a>
-      </div>
+      <p class="location-list">Sayville, Bayport, Bay Shore, Islip, East Islip, West Islip, Oakdale, Bohemia, Patchogue, Holbrook, Brookhaven, Ronkonkoma, Hauppauge, Smithtown, East Meadow &amp; surrounding Long Island communities.</p>
+      <a href="service-areas.html" class="btn-primary">View All Service Areas &rarr;</a>
     </div>
   </section>
 
@@ -1257,6 +1283,15 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
         </form>
       </div>
     </div>
+  </div>
+
+  <!-- STICKY MOBILE CTA BAR -->
+  <div class="sticky-mobile-cta" role="complementary" aria-label="Quick contact">
+    <a href="tel:6318486762" class="sticky-mobile-call">
+      <span class="call-label">Call Brendan</span>
+      <span class="call-number">(631) 848-6762</span>
+    </a>
+    <a href="contact.html" class="sticky-cta-btn" data-modal="quote">Free Quote</a>
   </div>
 
   <script>
