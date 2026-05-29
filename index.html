@@ -63,7 +63,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .btn-primary:hover{opacity:0.88;box-shadow:0 6px 32px rgba(28,110,28,0.65)}
 .btn-ghost{display:inline-block;padding:13px 28px;background:transparent;color:var(--color-white);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;border:2px solid var(--color-white);border-radius:4px;cursor:pointer;font-family:var(--font);transition:background var(--transition),color var(--transition)}
 .btn-ghost:hover{background:var(--color-white);color:var(--color-primary-dark)}
-.hero{position:relative;height:92vh;min-height:600px;background:#1C6E1C;display:flex;align-items:stretch;overflow:hidden}
+.hero{position:relative;height:92vh;min-height:600px;background:linear-gradient(to bottom,#1C6E1C 82%,#1c3c1c 100%);display:flex;align-items:stretch;overflow:hidden}
 .hero-left{width:100%;display:flex;align-items:center;padding:56px 60px 56px 80px;position:relative;z-index:2}
 .hero-right{position:absolute;inset:0;overflow:hidden}
 .hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 5%;display:block;transform:scale(1.0)}
@@ -83,7 +83,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .hero .btn-primary:hover{background:transparent!important;color:#C8A84B!important}
 .hero .btn-ghost{background:#C8A84B!important;border-color:#C8A84B!important;color:#0a140a!important;font-weight:700!important}
 .hero .btn-ghost:hover{background:#b8943e!important;border-color:#b8943e!important;color:#0a140a!important}
-.trust-ticker{background:#1C6E1C;border-bottom:1px solid rgba(255,255,255,0.15)}
+.trust-ticker{background:#1c3c1c;border-bottom:none}
 .trust-ticker-wrap{display:flex;justify-content:center;overflow:hidden}
 .trust-ticker-track{display:flex;align-items:center;flex-wrap:wrap;justify-content:center;gap:0;padding:20px 32px}
 .t-item{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,0.82);font-size:15px;font-weight:600;white-space:nowrap;padding:0 24px}
@@ -97,13 +97,15 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .eyebrow-text{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px}
 .eyebrow-text--green{color:#1C6E1C}
 .eyebrow-text--yellow{color:#FFD700}
-.sf-section{background:#111c11;padding:56px 32px 120px;border-top:1px solid rgba(255,255,255,0.06);position:relative}
-.sf-inner{max-width:720px;margin:0 auto}
+.sf-section{background:#1c3c1c;padding:56px 32px 40px;position:relative;overflow:hidden}
+.sf-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:130px;background:linear-gradient(to bottom,rgba(28,60,28,0),#ffffff);pointer-events:none}
+.sf-inner{max-width:720px;margin:0 auto;position:relative;z-index:1}
 .sf-heading{font-family:var(--font-heading);font-size:clamp(52px,7vw,86px);font-weight:800;text-transform:uppercase;color:#F5F5F0;line-height:1;margin-bottom:32px}
 .sf-heading span{color:var(--color-primary)}
 .sf-body{font-size:clamp(17px,1.8vw,21px);color:rgba(215,228,215,0.8);line-height:1.7;margin-bottom:20px}
+.sf-body strong{color:inherit;font-weight:400}
 .sf-footer{display:flex;align-items:center;justify-content:flex-start;gap:14px;padding:32px 0 16px;border-top:1px solid rgba(255,215,0,0.2);margin-top:12px}
-.sf-footer-text{font-family:var(--font-heading);font-size:clamp(20px,2.4vw,28px);font-weight:800;text-transform:uppercase;color:#FFD700;letter-spacing:0.06em}
+.sf-footer-text{font-family:var(--font-heading);font-size:clamp(20px,2.4vw,28px);font-weight:800;color:#FFD700;letter-spacing:0.06em}
 .ref-section{background:#f9f7f2;padding:96px 32px}
 .ref-inner{max-width:1100px;margin:0 auto}
 .ref-eyebrow-text{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#2d5a2d;text-align:center;margin-bottom:52px}
@@ -129,9 +131,9 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 @keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 @keyframes scroll-right{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
 @media(max-width:900px){.ref-top{grid-template-columns:1fr;gap:48px}}
-.owner-section{background:#ffffff;padding:72px 32px 64px;position:relative;z-index:2;margin-top:-88px;border-radius:10px 10px 0 0;box-shadow:0 -16px 48px rgba(0,0,0,0.18)}
+.owner-section{background:#ffffff;padding:56px 32px 64px;position:relative}
 .owner-watermark{display:none}
-.owner-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;position:relative;z-index:1}
+.owner-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start;position:relative;z-index:1}
 .owner-photo-wrap{position:relative}
 .owner-photo-wrap img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border-radius:2px;box-shadow:0 24px 60px rgba(0,0,0,0.18),0 0 0 1px rgba(28,110,28,0.1)}
 .owner-badge{position:absolute;bottom:-16px;right:-16px;background:linear-gradient(135deg,#228B22,#0E5010);border-radius:2px;padding:12px 16px;box-shadow:0 8px 32px rgba(28,110,28,0.5)}
@@ -142,14 +144,14 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .owner-section h2{font-family:var(--font-heading);font-size:clamp(30px,3.5vw,48px);font-weight:800;color:#111;line-height:1.05}
 .owner-section p{font-size:16px;color:#444;line-height:1.75;margin-bottom:24px}
 .owner-personal{font-style:italic;color:rgba(17,17,17,0.55)!important;margin-top:-8px!important}
-.owner-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(17,17,17,0.08);border-bottom:1px solid rgba(17,17,17,0.08);padding:20px 0;margin-bottom:10px}
+.owner-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(17,17,17,0.08);border-bottom:1px solid rgba(17,17,17,0.08);padding:16px 0;margin-top:20px;margin-bottom:28px}
 .owner-stat{padding:0 16px}
 .owner-stat:first-child{padding-left:0}
 .owner-stat+.owner-stat{border-left:1px solid rgba(17,17,17,0.08)}
 .owner-stat .stat-val{display:block;font-family:var(--font-heading);font-size:36px;font-weight:800;color:#111;line-height:1;margin-bottom:4px}
 .owner-stat .stat-val.purple{color:#1C6E1C}
 .owner-stat .stat-lbl{display:block;font-size:13px;font-weight:400;text-transform:none;letter-spacing:0;color:rgba(17,17,17,0.5)}
-.owner-callout{border-left:4px solid #2d5a2d;padding:20px 24px;background:rgba(28,110,28,0.04);border-radius:0 4px 4px 0;margin-bottom:28px}
+.owner-callout{border-left:3px solid #1C6E1C;padding:10px 20px;background:none;border-radius:0;margin-bottom:28px}
 .owner-callout p{font-size:15px;color:#444444;line-height:1.8;margin:0;font-style:italic}
 .owner-callout-meta{display:flex;align-items:center;gap:10px;margin-top:14px;padding-top:12px;border-top:1px solid rgba(45,90,45,0.15)}
 .owner-callout-stars{color:#C8A84B;font-size:13px;letter-spacing:3px;flex-shrink:0}
@@ -189,9 +191,9 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .hiw-cta{margin-top:48px}
 /* LANDING \ — proof settles after How It Works gold; right side drops, energy exhales */
 /* Tried RISING /: felt like another urgency push — wrong register for testimony. LANDING \ reads as arrival. */
-.rw-section{background:#ffffff;padding:72px 32px 64px}
+.rw-section{background:#f4f8f4;padding:88px 32px 80px}
 .rw-inner{max-width:1100px;margin:0 auto}
-.rw-section h2{font-family:var(--font-heading);font-size:clamp(30px,3.5vw,48px);font-weight:800;color:#111;margin-bottom:8px}
+.rw-section h2{font-family:var(--font-heading);font-size:clamp(30px,3.5vw,48px);font-weight:800;color:#111;margin-bottom:28px;text-align:center}
 .rw-accent{display:none}
 .rw-pullquote{text-align:center;max-width:900px;margin:0 auto 64px}
 .rw-pq-mark{font-size:clamp(100px,15vw,180px);line-height:0.5;color:rgba(28,110,28,0.1);font-family:var(--font-heading);font-weight:800;display:block;margin-bottom:12px;user-select:none}
@@ -213,8 +215,11 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .rw-footer{text-align:center;margin-top:48px}
 .rw-footer-stars{color:#FFD700;font-size:20px;letter-spacing:5px;display:block;margin-bottom:12px;text-shadow:0 1px 4px rgba(0,0,0,0.15)}
 .rw-footer-text{font-size:12px;color:rgba(17,17,17,0.5);text-transform:uppercase;letter-spacing:2px;margin-bottom:24px;font-weight:600}
-.locations-hub{background:#FFFFFF;padding:36px 32px 48px;border-top:none}
-.locations-hub-inner{max-width:1100px;margin:0 auto;text-align:center}
+.locations-hub{background:#f4f8f4;padding:72px 32px 80px;border-top:none}
+.locations-hub-inner{max-width:700px;margin:0 auto;text-align:center}
+.loc-grid{display:grid;grid-template-columns:repeat(3,1fr);margin:32px auto 40px;text-align:left;border-top:1px solid rgba(0,0,0,0.07);border-left:1px solid rgba(0,0,0,0.07)}
+.loc-grid a{display:block;color:#1C6E1C;font-size:15px;font-weight:600;text-decoration:none;padding:12px 16px;border-right:1px solid rgba(0,0,0,0.07);border-bottom:1px solid rgba(0,0,0,0.07)}
+.loc-grid a:hover{background:#eaf3ea;color:#0a4a0a}
 .location-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
 .location-pill{display:inline-block;padding:8px 18px;background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius-pill);font-size:13px;font-weight:600;color:var(--color-body);transition:all var(--transition)}
 .location-pill:hover{background:var(--color-primary);color:var(--color-white);border-color:var(--color-primary)}
@@ -279,7 +284,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .section-heading{font-size:clamp(30px,3.5vw,48px);font-weight:800;color:var(--color-body);margin-bottom:12px;line-height:1.05;font-family:var(--font-heading)}
 .section-heading-accent{display:none}
 /* LANDING \ — FAQ is resolution, not escalation; slant settles rather than pushes */
-.faq-section{background:#ffffff;padding:64px 32px 80px;border-top:1px solid rgba(0,0,0,0.06);position:relative}
+.faq-section{background:#ffffff;padding:88px 32px 80px;position:relative}
 .faq-inner{max-width:820px;margin:0 auto;text-align:center}
 .faq-intro{max-width:600px;margin:0 auto;font-size:16px;color:#444;line-height:1.75;text-align:center}
 .faq-list{margin:32px 0;text-align:left}
@@ -335,9 +340,9 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
   .hero-buttons .btn-primary,.hero-buttons .btn-ghost{text-align:center}
 }
 .ba-section{background:#ffffff;padding:48px 32px 80px;position:relative}
-.ba-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent 0%,#FFED85 100%);pointer-events:none;z-index:1}
+.ba-section::after{display:none}
 .ba-inner{max-width:1100px;margin:0 auto}
-.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
 .ba-pair{border-radius:6px;overflow:hidden;border:1px solid rgba(17,17,17,0.08);box-shadow:0 4px 16px rgba(0,0,0,0.07)}
 .ba-slider{position:relative;aspect-ratio:4/3;min-height:320px;overflow:hidden;cursor:col-resize;user-select:none;-webkit-user-select:none;touch-action:pan-y}
 .ba-slide-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;display:block}
@@ -350,7 +355,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .ba-handle-btn{width:40px;height:40px;background:#FFD700;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 14px rgba(0,0,0,0.35);flex-shrink:0}
 .ba-caption{padding:14px 16px;background:#fff;border-top:1px solid rgba(17,17,17,0.06)}
 .ba-caption h3{font-family:var(--font-heading);font-size:16px;font-weight:800;text-transform:uppercase;color:#111;margin-bottom:2px}
-.ba-caption p{font-size:12px;color:rgba(17,17,17,0.5);font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.ba-caption p{font-size:13px;color:rgba(17,17,17,0.55);font-weight:400;text-transform:none;letter-spacing:0}
 .eco-section{background:#2db82d;padding:64px 32px 120px;position:relative}
 .eco-section::after{content:'';position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(to bottom,transparent 0%,#FFED85 100%);pointer-events:none;z-index:1}
 .eco-inner{max-width:1000px;margin:0 auto;text-align:center}
@@ -380,13 +385,13 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .partner-logos{padding:40px 32px 0;border-top:1px solid rgba(0,0,0,0.07);margin-top:40px;max-width:1100px;margin-left:auto;margin-right:auto}
 .partner-logos-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#999;margin-bottom:24px;text-align:center}
 .partner-logos-grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:32px 52px}
-.partner-logos-grid img{height:64px;width:auto;display:block;opacity:0.82;transition:opacity 0.2s}
+.partner-logos-grid img{height:84px;width:auto;display:block;opacity:0.92;transition:opacity 0.2s}
 .partner-logos-grid img:hover{opacity:1}
 .partner-logos-grid img:nth-child(odd){transform:translateY(-16px)}
 .partner-logos-grid img:nth-child(even){transform:translateY(16px)}
 /* MERGED HOW IT WORKS */
-.combined-hiw{background:linear-gradient(to bottom,#FFED85 0%,#FFF8B0 100%);padding:64px 32px;position:relative;overflow:hidden;border-top:none}
-.combined-hiw-dotgrid{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,0,0,0.06) 1px,transparent 1px);background-size:32px 32px;opacity:0.2;pointer-events:none}
+.combined-hiw{background:#f4f8f4;padding:64px 32px;position:relative;overflow:hidden;border-top:none}
+.combined-hiw-dotgrid{display:none}
 .combined-hiw-inner{max-width:900px;margin:0 auto;text-align:center;position:relative}
 .combined-hiw h2{font-family:var(--font-heading);font-size:clamp(28px,3.5vw,44px);font-weight:800;color:#111;margin-bottom:12px;text-shadow:0 2px 6px rgba(0,0,0,0.10)}
 .combined-hiw-accent{display:none}
@@ -403,7 +408,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .disposal-col svg{display:block;margin:0 auto 10px}
 .disposal-col strong{font-family:var(--font-heading);font-size:16px;font-weight:800;color:#FFD700;text-transform:uppercase;display:block;margin-bottom:8px}
 .disposal-col p{color:rgba(255,255,255,0.88);font-size:13px;line-height:1.6;margin:0}
-.combined-callout{max-width:700px;margin:0 auto;border-left:3px solid rgba(28,110,28,0.5);padding:20px 24px;background:rgba(255,255,255,0.55);border-radius:0 6px 6px 0;text-align:left}
+.combined-callout{max-width:700px;margin:0 auto;border-left:3px solid #1C6E1C;padding:20px 24px;background:#ffffff;border-radius:0 6px 6px 0;text-align:left}
 .combined-callout p{color:rgba(17,17,17,0.8);font-size:15px;line-height:1.8;margin:0;font-style:italic}
 .combined-callout-meta{display:flex;align-items:center;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(17,17,17,0.1)}
 .combined-callout-stars{color:#C8A84B;font-size:13px;letter-spacing:2px;flex-shrink:0}
@@ -411,8 +416,8 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .combined-hiw-cta{margin-top:40px}
 @media(max-width:768px){.process-compact{grid-template-columns:1fr;gap:8px}.process-arrow{display:none}.disposal-compact{grid-template-columns:1fr;gap:12px}}
 /* REVIEWS — 3-COLUMN GRID */
-.rw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:40px}
-.rw-grid-card{border-radius:6px;padding:28px;background:#fff;border:1px solid rgba(17,17,17,0.08);border-left:3px solid #1C6E1C;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;flex-direction:column}
+.rw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:40px}
+.rw-grid-card{border-radius:6px;padding:32px;background:#fff;border:1px solid rgba(17,17,17,0.07);border-left:3px solid #1C6E1C;box-shadow:0 2px 16px rgba(0,0,0,0.07);display:flex;flex-direction:column}
 .rw-grid-card .rw-card-text{flex:1}
 @media(max-width:768px){.rw-grid{grid-template-columns:1fr}}
 /* GOOGLE BADGE */
@@ -645,7 +650,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
   <section class="sf-section">
     <div class="sf-inner">
       <h2 class="sf-heading">Sound Familiar<span>?</span></h2>
-      <p class="sf-body">You blocked off the afternoon. They didn&rsquo;t show &mdash; no call, nothing. Or they showed up and the price was suddenly different from what you were quoted. Or they took one look at the hot tub, the refrigerator, the basement full of stuff &mdash; and had a reason to pass.</p>
+      <p class="sf-body">You blocked off the afternoon. <strong>They didn&rsquo;t show &mdash; no call, nothing.</strong> Or they showed up and <strong>the price was suddenly different from what you were quoted.</strong> Or they showed up, took one look at the refrigerator at the bottom of a narrow staircase &mdash; and <strong>said it couldn&rsquo;t be done.</strong></p>
       <p class="sf-body">It happens so often on Long Island that customers apologize when they call Brendan. For assuming he&rsquo;d be like the others.</p>
       <div class="sf-footer">
         <span class="sf-footer-text">We fix all three. Every time.</span>
@@ -670,22 +675,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
       <div style="order:1;" data-reveal>
         <div class="owner-text-head">
           <div class="owner-accent-bar"></div>
-          <h2>The Guy Who Answers<br>the Phone <span style="color:#1C6E1C;">Shows Up</span></h2>
-        </div>
-        <p>When you call Integrity Hauling, you&rsquo;re talking directly to <strong style="color:#111;">Brendan</strong> &mdash; the same guy who shows up at your door with the truck. Not a dispatcher. Not a crew he sent ahead. Brendan. He answers, he quotes it, he hauls it.</p>
-        <p>Brendan Keane has been hauling on Long Island for 27 years. He knows every town, every tight driveway, every HOA that makes things complicated. Real estate agents trust him with house keys when clients are out of state. He takes the jobs other companies won&rsquo;t touch &mdash; and he shows up on time.</p>
-        <p><strong style="color:#111;">&ldquo;You call, we haul. The price he quotes is the price you pay. Every job. Every time.&rdquo;</strong></p>
-        <p class="owner-personal">Brendan still does every job himself. At 27 years in, he&rsquo;s not interested in handing that off.</p>
-
-        <div class="owner-callout" data-reveal data-reveal-delay="100">
-          <p>&ldquo;Finally a service provider that answers the phone and returns calls, keeps appointments and provides excellent service. Very honest and just genuinely a pleasure to deal with.&rdquo;</p>
-          <div class="owner-callout-meta">
-            <span class="owner-callout-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <div>
-              <p class="owner-callout-reviewer">Gary Epstein</p>
-              <span class="owner-callout-attr">Google Review</span>
-            </div>
-          </div>
+          <h2>The Guy Who Answers<br>the Phone <span style="color:#C8A84B;">Shows Up</span></h2>
         </div>
 
         <div class="owner-stats" data-reveal>
@@ -700,6 +690,20 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
           <div class="owner-stat">
             <span class="stat-val" data-counter="27" data-suffix="">27</span>
             <span class="stat-lbl">years on Long Island</span>
+          </div>
+        </div>
+
+        <p>When you call Integrity Hauling, you&rsquo;re talking directly to <strong style="color:#111;">Brendan</strong> &mdash; the same guy who shows up at your door with the truck. Not a dispatcher. Not a crew he sent ahead. Brendan. He answers, he quotes it, he hauls it.</p>
+        <p>Brendan Keane has been hauling on Long Island for 27 years. He knows every town, every tight driveway, every HOA that makes things complicated. Real estate agents trust him with house keys when clients are out of state. He takes the jobs other companies won&rsquo;t touch &mdash; and he shows up on time.</p>
+
+        <div class="owner-callout" data-reveal data-reveal-delay="100">
+          <p>&ldquo;Finally a service provider that answers the phone and returns calls, keeps appointments and provides excellent service. Very honest and just genuinely a pleasure to deal with.&rdquo;</p>
+          <div class="owner-callout-meta">
+            <span class="owner-callout-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <div>
+              <p class="owner-callout-reviewer">Gary Epstein</p>
+              <span class="owner-callout-attr">Google Review</span>
+            </div>
           </div>
         </div>
 
@@ -738,7 +742,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 
         <a href="junk-removal.html" class="svc-card svc-card--featured" style="background-image:url(images/service-residential-clutter.png);" data-reveal>
           <div class="svc-card-overlay"></div>
-          <span class="svc-card-badge">Most Popular</span>
+
           <div class="svc-card-body">
             <h3>Residential Junk Removal</h3>
             <p>The couch from 2009. The broken appliances taking up the garage. The stuff you keep saying you&rsquo;ll deal with &mdash; one call and it&rsquo;s gone by tonight.</p>
@@ -801,7 +805,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
               </div>
             </div>
           </div>
-          <div class="ba-caption"><h3>Shed Removal</h3><p>Same-day clearout</p></div>
+          <div class="ba-caption"><h3>Shed Removal</h3><p>30 years of tools piled up. Gone same day.</p></div>
         </div>
 
         <div class="ba-pair">
@@ -817,26 +821,10 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
               </div>
             </div>
           </div>
-          <div class="ba-caption"><h3>Basement Cleanout</h3><p>Left broom clean</p></div>
+          <div class="ba-caption"><h3>Basement Cleanout</h3><p>Listing on Thursday. Called Tuesday. Done Wednesday morning.</p></div>
         </div>
 
-        <div class="ba-pair">
-          <div class="ba-slider">
-            <img class="ba-slide-img ba-slide-img--before" src="images/after-loft.png" alt="After: loft cleared" width="400" height="300" loading="lazy">
-            <img class="ba-slide-img ba-slide-img--after" src="images/before-loft.png" alt="Before: loft packed with items" width="400" height="300" loading="lazy">
-            <span class="ba-slide-label ba-slide-label--before">Before</span>
-            <span class="ba-slide-label ba-slide-label--after">After</span>
-            <div class="ba-handle">
-              <div class="ba-handle-line"></div>
-              <div class="ba-handle-btn" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 3 12 9 6"/><polyline points="15 18 21 12 15 6"/></svg>
-              </div>
-            </div>
-          </div>
-          <div class="ba-caption"><h3>Loft Cleanout</h3><p>Every item hauled away</p></div>
-        </div>
-
-        <div class="ba-pair">
+<div class="ba-pair">
           <div class="ba-slider">
             <img class="ba-slide-img ba-slide-img--before" src="images/after-yard.png" alt="After: yard cleared" width="400" height="300" loading="lazy">
             <img class="ba-slide-img ba-slide-img--after" src="images/before-yard.png" alt="Before: yard debris and junk" width="400" height="300" loading="lazy">
@@ -849,7 +837,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
               </div>
             </div>
           </div>
-          <div class="ba-caption"><h3>Yard Debris Removal</h3><p>Cleared in one visit</p></div>
+          <div class="ba-caption"><h3>Yard Debris Removal</h3><p>Called at 9am. Truck was gone by 1.</p></div>
         </div>
 
       </div>
@@ -860,41 +848,8 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
   <section class="combined-hiw">
     <div class="combined-hiw-dotgrid" aria-hidden="true"></div>
     <div class="combined-hiw-inner">
-      <div class="eyebrow-row">
-        <span class="eyebrow-line eyebrow-line--green"></span>
-        <span class="eyebrow-text eyebrow-text--green">No Pressure. No Surprises.</span>
-        <span class="eyebrow-line eyebrow-line--green"></span>
-      </div>
-      <h2>How It Works</h2>
-      <div class="combined-hiw-accent"></div>
-
-      <div class="process-compact">
-        <div class="process-step" data-reveal>
-          <div class="process-step-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          </div>
-          <strong>Call Brendan</strong>
-          <p>He picks up. <a href="tel:6318486762" style="color:#1C6E1C;font-weight:700;">(631) 848-6762</a> &mdash; real person, every time.</p>
-        </div>
-        <div class="process-arrow" aria-hidden="true">&rarr;</div>
-        <div class="process-step" data-reveal data-reveal-delay="150">
-          <div class="process-step-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <strong>You Approve It</strong>
-          <p>Free estimate on-site. You approve before anything moves &mdash; no surprises, no pressure.</p>
-        </div>
-        <div class="process-arrow" aria-hidden="true">&rarr;</div>
-        <div class="process-step" data-reveal data-reveal-delay="300">
-          <div class="process-step-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          </div>
-          <strong>It&rsquo;s Gone</strong>
-          <p>Same day, most jobs. Brendan loads it out, sweeps up after. You&rsquo;re done.</p>
-        </div>
-      </div>
-
-      <p class="hiw-transition">And here&rsquo;s where it actually goes:</p>
+      <h2>Donate First. Recycle Second. Landfill Last.</h2>
+      <p style="color:#555;font-size:16px;line-height:1.7;max-width:580px;margin:12px auto 36px;">Most of what Brendan hauls gets donated or recycled before anything sees a landfill. That&rsquo;s not a marketing claim &mdash; it&rsquo;s in the reviews.</p>
 
       <div class="disposal-compact">
         <div class="disposal-col" data-reveal>
@@ -1071,7 +1026,23 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
     <div class="locations-hub-inner">
       <h2 class="section-heading">Serving Long Island, NY</h2>
       <div class="section-heading-accent centered"></div>
-      <p class="location-list">Sayville, Bayport, Bay Shore, Islip, East Islip, West Islip, Oakdale, Bohemia, Patchogue, Holbrook, Brookhaven, Ronkonkoma, Hauppauge, Smithtown, East Meadow &amp; surrounding Long Island communities.</p>
+      <div class="loc-grid">
+        <a href="sayville.html">Sayville</a>
+        <a href="bayport.html">Bayport</a>
+        <a href="bay-shore.html">Bay Shore</a>
+        <a href="islip.html">Islip</a>
+        <a href="east-islip.html">East Islip</a>
+        <a href="west-islip.html">West Islip</a>
+        <a href="oakdale.html">Oakdale</a>
+        <a href="bohemia.html">Bohemia</a>
+        <a href="patchogue.html">Patchogue</a>
+        <a href="holbrook.html">Holbrook</a>
+        <a href="brookhaven.html">Brookhaven</a>
+        <a href="ronkonkoma.html">Ronkonkoma</a>
+        <a href="hauppauge.html">Hauppauge</a>
+        <a href="smithtown.html">Smithtown</a>
+        <a href="east-meadow.html">East Meadow</a>
+      </div>
       <a href="service-areas.html" class="btn-primary">View All Service Areas &rarr;</a>
     </div>
   </section>
