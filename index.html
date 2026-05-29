@@ -389,6 +389,16 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .partner-logos-grid img:hover{opacity:1}
 .partner-logos-grid img:nth-child(odd){transform:translateY(-16px)}
 .partner-logos-grid img:nth-child(even){transform:translateY(16px)}
+/* REAL ESTATE TRUST BLOCK */
+.re-trust{padding:40px 32px 0;margin-top:40px;border-top:1px solid rgba(0,0,0,0.07);max-width:1100px;margin-left:auto;margin-right:auto}
+.re-trust-inner{background:#f4f8f4;border-radius:8px;padding:32px 40px;border-left:4px solid #1C6E1C}
+.re-trust-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#1C6E1C;margin-bottom:10px}
+.re-trust h3{font-family:var(--font-heading);font-size:clamp(20px,2.2vw,26px);font-weight:800;color:#111;margin-bottom:8px;line-height:1.1}
+.re-trust p{font-size:15px;color:#555;line-height:1.6;margin-bottom:24px}
+.re-trust-logos{display:flex;flex-wrap:wrap;align-items:center;gap:24px 40px}
+.re-trust-logos img{height:68px;width:auto;display:block;opacity:0.85;transition:opacity 0.2s}
+.re-trust-logos img:hover{opacity:1}
+@media(max-width:768px){.re-trust-inner{padding:24px 20px}.re-trust-logos img{height:40px}}
 /* MERGED HOW IT WORKS */
 .combined-hiw{background:#f4f8f4;padding:64px 32px;position:relative;overflow:hidden;border-top:none}
 .combined-hiw-dotgrid{display:none}
@@ -695,6 +705,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 
         <p>When you call Integrity Hauling, you&rsquo;re talking directly to <strong style="color:#111;">Brendan</strong> &mdash; the same guy who shows up at your door with the truck. Not a dispatcher. Not a crew he sent ahead. Brendan. He answers, he quotes it, he hauls it.</p>
         <p>Brendan Keane has been hauling on Long Island for 27 years. He knows every town, every tight driveway, every HOA that makes things complicated. Real estate agents trust him with house keys when clients are out of state. He takes the jobs other companies won&rsquo;t touch &mdash; and he shows up on time.</p>
+        <p>He will treat your home and property like it was his own.</p>
 
         <div class="owner-callout" data-reveal data-reveal-delay="100">
           <p>&ldquo;Finally a service provider that answers the phone and returns calls, keeps appointments and provides excellent service. Very honest and just genuinely a pleasure to deal with.&rdquo;</p>
@@ -712,6 +723,20 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 
     </div>
 
+    <div class="re-trust" data-reveal>
+      <div class="re-trust-inner">
+        <p class="re-trust-label">Real Estate</p>
+        <h3>Long Island Realtors Trust Brendan With Their Keys</h3>
+        <p>When a property needs to be cleared before listing, agents call Brendan. He shows up on time, handles it cleanly, and treats the home like it&rsquo;s his own &mdash; even when the seller is out of state.</p>
+        <div class="re-trust-logos">
+          <img src="images/artboard-1.png" alt="Century 21" loading="lazy">
+          <img src="images/artboard-4.png" alt="Prudential Real Estate" loading="lazy">
+          <img src="images/artboard-2.png" alt="RealtyConnect USA" loading="lazy">
+          <img src="images/artboard-3.png" alt="Douglas Elliman" loading="lazy">
+        </div>
+      </div>
+    </div>
+
     <div class="partner-logos" data-reveal>
       <p class="partner-logos-label">Trusted by Long Island professionals</p>
       <div class="partner-logos-grid">
@@ -719,10 +744,6 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
         <img src="images/partner-cubesmart.png" alt="CubeSmart Self Storage" loading="lazy">
         <img src="images/partner-prime-storage.jpg" alt="Prime Storage" loading="lazy">
         <img src="images/partner-li-ducks.png" alt="Long Island Ducks" loading="lazy">
-        <img src="images/artboard-1.png" alt="Century 21" loading="lazy">
-        <img src="images/artboard-4.png" alt="Prudential Real Estate" loading="lazy">
-        <img src="images/artboard-2.png" alt="RealtyConnect USA" loading="lazy">
-        <img src="images/artboard-3.png" alt="Douglas Elliman" loading="lazy">
       </div>
     </div>
   </section>
