@@ -36,6 +36,10 @@
           var p  = body.querySelector('p');
           if (h3 && svc.title) h3.textContent = svc.title;
           if (p  && svc.desc)  p.textContent  = svc.desc;
+          if (svc.photo) {
+            var card = body.closest('.svc-card');
+            if (card) card.style.backgroundImage = 'url(' + esc(svc.photo) + ')';
+          }
         });
       }
 
