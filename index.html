@@ -85,7 +85,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .hero .btn-primary:hover{background:transparent!important;color:#C8A84B!important}
 .hero .btn-ghost{background:#C8A84B!important;border-color:#C8A84B!important;color:#003820!important;font-weight:700!important;text-transform:none}
 .hero .btn-ghost:hover{background:#b8943e!important;border-color:#b8943e!important;color:#003820!important}
-.trust-ticker{background:linear-gradient(180deg,#007a3d 0%,#005e2c 100%);box-shadow:0 6px 20px rgba(0,0,0,0.45),inset 0 1px 0 rgba(255,255,255,0.1);position:relative;z-index:2}
+.trust-ticker{background:linear-gradient(180deg,#007a3d 0%,#005e2c 100%);box-shadow:0 6px 20px rgba(0,0,0,0.45),inset 0 1px 0 rgba(255,255,255,0.1);position:sticky;top:70px;z-index:100}
 .trust-ticker-wrap{display:flex;justify-content:center;overflow:hidden}
 .trust-ticker-track{display:flex;align-items:center;flex-wrap:wrap;justify-content:center;gap:0;padding:20px 32px}
 .t-item{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,0.82);font-size:15px;font-weight:600;white-space:nowrap;padding:0 24px}
@@ -619,14 +619,14 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
           <span class="hero-badge-text"><strong>5.0 Stars</strong> &middot; 215 Google Reviews</span>
         </div>
         <h1>Junk Removal in Long Island, NY</h1>
-        <div class="hero-tagline">Call Before Noon.<br><span>Your Junk Is Gone<br>by Tonight.</span></div>
-        <p>Brendan Keane &mdash; not a call center, Brendan himself &mdash; calls you back, shows up on time, hauls everything out, sweeps up after, and charges the exact price he quoted. 27 years. 7 days a week.</p>
+        <div class="hero-tagline"><span id="wg-hero-line1">Call Before Noon.</span><br><span id="wg-hero-em">Your Junk Is Gone<br>by Tonight.</span></div>
+        <p id="wg-hero-sub">Brendan Keane &mdash; not a call center, Brendan himself &mdash; calls you back, shows up on time, hauls everything out, sweeps up after, and charges the exact price he quoted. 27 years. 7 days a week.</p>
         <div class="hero-buttons">
           <a href="tel:6318486762" class="btn-primary">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:inline;vertical-align:-2px;margin-right:6px;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             Call (631) 848-6762
           </a>
-          <a href="contact.html" class="btn-ghost" data-modal="quote">Get a Free Quote</a>
+          <a href="contact.html" class="btn-ghost" id="wg-hero-cta" data-modal="quote">Get a Free Quote</a>
         </div>
       </div>
     </div>
@@ -1312,6 +1312,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
     },{passive:true});
   })();
   </script>
+  <script src="content-loader.js"></script>
 
 </body>
 </html>
