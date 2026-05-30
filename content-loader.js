@@ -11,6 +11,12 @@
       fill('wg-hero-sub',   page.subheadline);
       fill('wg-hero-cta',   page.ctaText);
 
+      // ── Hero photo ───────────────────────────────────────────────────────────
+      if (c.heroPhoto) {
+        var heroImg = document.getElementById('wg-hero-img');
+        if (heroImg) heroImg.src = c.heroPhoto;
+      }
+
       // ── Phone ────────────────────────────────────────────────────────────────
       if (c.phone) {
         var digits = c.phone.replace(/\D/g, '');
