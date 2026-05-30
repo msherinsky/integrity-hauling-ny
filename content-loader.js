@@ -11,18 +11,17 @@
       fill('wg-hero-sub',   page.subheadline);
       fill('wg-hero-cta',   page.ctaText);
 
-      // ── Phone — update href and visible text on every tel: link ─────────────
+      // ── Phone ────────────────────────────────────────────────────────────────
       if (c.phone) {
         var digits = c.phone.replace(/\D/g, '');
         document.querySelectorAll('[data-phone-href]').forEach(function (el) {
           el.href = 'tel:' + digits;
-          // Only replace text nodes that look like a phone number
           var txt = el.textContent.trim();
           if (/\d{3}/.test(txt)) el.textContent = c.phone;
         });
       }
 
-      // ── Services — update card title + desc by index ─────────────────────
+      // ── Services ─────────────────────────────────────────────────────────────
       if (c.services && c.services.length) {
         c.services.forEach(function (svc, i) {
           var body = document.querySelector('[data-svc="' + i + '"]');
@@ -34,15 +33,15 @@
         });
       }
 
-      // ── Service areas — replace loc-grid if editor has areas ────────────────
-      var grid = document.getElementById('wg-areas');
-      if (grid && c.serviceAreas && c.serviceAreas.length) {
-        grid.innerHTML = c.serviceAreas.map(function (area) {
+      // ── Service areas ─────────────────────────────────────────────────────────
+      var areasEl = document.getElementById('wg-areas');
+      if (areasEl && c.serviceAreas && c.serviceAreas.length) {
+        areasEl.innerHTML = c.serviceAreas.map(function (area) {
           return '<span style="display:inline-block;padding:6px 14px;background:rgba(0,148,68,0.08);border-radius:4px;font-size:14px;font-weight:600;color:#005028;">' + esc(area) + '</span>';
         }).join('');
       }
 
-      // ── Testimonials — replace review grid if editor has any ─────────────
+      // ── Testimonials ──────────────────────────────────────────────────────────
       var reviews = document.getElementById('wg-reviews');
       if (reviews && c.testimonials && c.testimonials.length) {
         reviews.innerHTML = c.testimonials.map(function (t) {
@@ -51,6 +50,18 @@
             '<span class="rw-card-stars">' + stars + '</span>' +
             '<p class="rw-card-text">&ldquo;' + esc(t.quote) + '&rdquo;</p>' +
             '<div class="rw-card-author"><strong>' + esc(t.name) + '</strong></div>' +
+          '</div>';
+        }).join('');
+      }
+
+      // ── Gallery ───────────────────────────────────────────────────────────────
+      var galSection = document.getElementById('wg-gallery-section');
+      var galGrid    = document.getElementById('wg-gallery');
+      if (galGrid && c.gallery && c.gallery.length) {
+        galSection.style.display = 'block';
+        galGrid.innerHTML = c.gallery.map(function (url) {
+          return '<div style="aspect-ratio:1;overflow:hidden;border-radius:6px;background:#e5e7eb;">' +
+            '<img src="' + esc(url) + '" alt="Job photo" loading="lazy" style="width:100%;height:100%;object-fit:cover;">' +
           '</div>';
         }).join('');
       }
@@ -64,6 +75,6 @@
   }
 
   function esc(s) {
-    return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 }());
