@@ -11,11 +11,26 @@
       fill('wg-hero-sub',   page.subheadline);
       fill('wg-hero-cta',   page.ctaText);
 
-      // ── Hero photo ───────────────────────────────────────────────────────────
-      if (c.heroPhoto) {
-        var heroImg = document.getElementById('wg-hero-img');
-        if (heroImg) heroImg.src = c.heroPhoto;
-      }
+      // ── Named photo slots ─────────────────────────────────────────────────────
+      var photoMap = {
+        heroPhoto:        'wg-hero-img',
+        ownerPhoto1:      'wg-ownerPhoto1',
+        ownerPhoto2:      'wg-ownerPhoto2',
+        ba_shed_before:   'wg-ba-shed-before',
+        ba_shed_after:    'wg-ba-shed-after',
+        ba_basement_before: 'wg-ba-basement-before',
+        ba_basement_after:  'wg-ba-basement-after',
+        ba_yard_before:   'wg-ba-yard-before',
+        ba_yard_after:    'wg-ba-yard-after',
+        ba_loft_before:   'wg-ba-loft-before',
+        ba_loft_after:    'wg-ba-loft-after',
+      };
+      Object.keys(photoMap).forEach(function (key) {
+        if (c[key]) {
+          var el = document.getElementById(photoMap[key]);
+          if (el) el.src = c[key];
+        }
+      });
 
       // ── Phone ────────────────────────────────────────────────────────────────
       if (c.phone) {
