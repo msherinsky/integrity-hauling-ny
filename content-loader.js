@@ -90,6 +90,53 @@
           '</div>';
         }).join('');
       }
+
+      // ── CTA color ─────────────────────────────────────────────────────────────
+      if (c.ctaColor) {
+        document.querySelectorAll('[data-cta-bg]').forEach(function (el) {
+          el.style.background = c.ctaColor;
+        });
+        document.documentElement.style.setProperty('--accent', c.ctaColor);
+      }
+
+      // ── Business hours (compact footer summary) ───────────────────────────────
+      var hoursEl = document.getElementById('wg-hours');
+      if (hoursEl && c.hours) {
+        var DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+        function fmt12h(v) {
+          if (!v) return '';
+          var h = parseInt(v.split(':')[0]);
+          return (h === 0 ? 12 : h > 12 ? h - 12 : h) + (h < 12 ? 'am' : 'pm');
+        }
+        var parts = [], i = 0;
+        while (i < DAYS.length) {
+          var d = DAYS[i], row = c.hours[d];
+          if (!row) { i++; continue; }
+          var j = i + 1;
+          while (j < DAYS.length && c.hours[DAYS[j]] &&
+                 c.hours[DAYS[j]].x === row.x &&
+                 c.hours[DAYS[j]].o === row.o &&
+                 c.hours[DAYS[j]].c === row.c) { j++; }
+          var label = j > i + 1 ? DAYS[i] + '–' + DAYS[j - 1] : DAYS[i];
+          parts.push(label + ' · ' + (row.x ? 'Closed' : fmt12h(row.o) + '–' + fmt12h(row.c)));
+          i = j;
+        }
+        hoursEl.textContent = parts.join(' | ');
+      }
+
+      // ── Footer social links ───────────────────────────────────────────────────
+      if (c.facebook) {
+        document.querySelectorAll('[data-social="facebook"]').forEach(function (el) { el.href = c.facebook; });
+      }
+      if (c.googleBiz) {
+        document.querySelectorAll('[data-social="google"]').forEach(function (el) { el.href = c.googleBiz; });
+      }
+      if (c.instagram) {
+        document.querySelectorAll('[data-social="instagram"]').forEach(function (el) { el.href = c.instagram; });
+      }
+      if (c.copyright) {
+        document.querySelectorAll('[data-copyright]').forEach(function (el) { el.textContent = c.copyright; });
+      }
     })
     .catch(function () {});
 
