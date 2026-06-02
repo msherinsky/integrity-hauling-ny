@@ -89,7 +89,17 @@ document.querySelectorAll('.ba-slider').forEach(function(slider){
   if(!window.matchMedia||!window.matchMedia('(max-width:768px)').matches) return;
   var track=document.querySelector('.trust-ticker-track');
   if(!track) return;
-  track.innerHTML+=track.innerHTML;
+  var orig=track.innerHTML;
+  track.innerHTML=orig+orig;
+  var x=0,halfW=0;
+  function tick(){
+    if(!halfW) halfW=track.scrollWidth/2;
+    x+=0.5;
+    if(x>=halfW) x-=halfW;
+    track.style.transform='translateX(-'+x+'px)';
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
 })();
 
 (function(){
