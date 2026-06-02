@@ -25,7 +25,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=optional"></noscript>
 <style>
 /* ── INTEGRITY HAULING — Brand: Forest Green + Yellow ─────────────── */
-:root{--color-primary:#009444;--color-primary-dark:#007838;--color-primary-deeper:#005028;--color-primary-mid:#FFDE17;--color-primary-light:#F0FAF0;--color-header:#009444;--color-hero-bg:#009444;--color-dark:#1A1A1A;--color-footer:#009444;--color-light-alt:#F5FAF5;--color-white:#FFFFFF;--color-body:#1A1A1A;--color-border:#D8E8D8;--font-heading:'Barlow Condensed',sans-serif;--font:'Barlow',sans-serif;--radius-card:6px;--radius-pill:22px;--transition:0.25s ease}
+:root{--color-primary:#009444;--color-primary-dark:#007838;--color-primary-deeper:#005028;--color-primary-mid:#FFDE17;--color-primary-light:#F0FAF0;--color-header:#009444;--color-hero-bg:#009444;--color-dark:#1A1A1A;--color-footer:#005028;--color-light-alt:#F5FAF5;--color-white:#FFFFFF;--color-body:#1A1A1A;--color-border:#D8E8D8;--font-heading:'Barlow Condensed',sans-serif;--font:'Barlow',sans-serif;--radius-card:6px;--radius-pill:22px;--transition:0.25s ease}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--font);color:var(--color-body);background:var(--color-white);font-size:16px;line-height:1.65}
@@ -37,7 +37,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .header-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;text-decoration:none}
 .header-logo .logo-text{display:flex;flex-direction:column;line-height:1.1}
 .header-logo .logo-name{font-size:20px;font-weight:800;color:var(--color-white);text-transform:uppercase;letter-spacing:1px;font-family:var(--font-heading)}
-.header-logo .logo-sub{font-size:10px;font-weight:600;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:1.5px}
+.header-logo .logo-sub{font-size:10px;font-weight:600;color:rgba(255,255,255,0.95);text-transform:uppercase;letter-spacing:1.5px}
 .header-nav{flex:1;display:flex;align-items:center;justify-content:center;gap:8px}
 .header-nav a,.header-nav .nav-dropdown>button{color:var(--color-white);font-size:15px;font-weight:600;padding:8px 14px;border-radius:4px;background:none;border:none;cursor:pointer;font-family:var(--font);display:flex;align-items:center;gap:4px;white-space:nowrap}
 .header-nav a:hover,.header-nav .nav-dropdown>button:hover{background:rgba(255,255,255,0.15)}
@@ -266,7 +266,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .modal-form .btn-primary{width:100%;padding:14px;text-align:center;font-size:15px;letter-spacing:1px}
 .modal-close{position:absolute;top:14px;right:14px;background:none;border:none;font-size:24px;color:#aaa;cursor:pointer;line-height:1;z-index:1}
 .modal-close:hover{color:var(--color-dark)}
-.site-footer{background:var(--color-footer);padding:64px 32px 0;color:rgba(255,255,255,0.72)}
+.site-footer{background:var(--color-footer);padding:64px 32px 0;color:rgba(255,255,255,0.88)}
 .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:52px}
 .footer-brand p{font-size:13px;line-height:1.7;margin-bottom:8px}
 .footer-brand .footer-logo-text{display:flex;flex-direction:column;margin-bottom:18px}
@@ -276,12 +276,12 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .footer-brand .footer-hours{font-size:12px;color:var(--color-primary-mid);margin-top:6px;display:block}
 .footer-col h3{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--color-white);margin-bottom:16px}
 .footer-col ul li{margin-bottom:8px}
-.footer-col ul a{font-size:13px;color:rgba(255,255,255,0.62)}
+.footer-col ul a{font-size:13px;color:rgba(255,255,255,0.88)}
 .footer-col ul a:hover{color:var(--color-primary-mid)}
 .social-icons{display:flex;gap:10px;margin-top:4px}
 .social-icon{width:36px;height:36px;border:1px solid rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,0.7)}
 .social-icon:hover{background:var(--color-primary);border-color:var(--color-primary);color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding:20px 32px;text-align:center;font-size:12px;color:rgba(255,255,255,0.65)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding:20px 32px;text-align:center;font-size:12px;color:rgba(255,255,255,0.82)}
 .footer-bottom a{color:rgba(255,255,255,0.75);text-decoration:underline}
 .footer-bottom a:hover{color:var(--color-primary-mid)}
 .section-heading{font-size:clamp(30px,3.5vw,48px);font-weight:800;color:var(--color-body);margin-bottom:12px;line-height:1.05;font-family:var(--font-heading)}
@@ -632,7 +632,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
       </div>
     </div>
     <div class="hero-right">
-      <img id="wg-hero-img" src="images/owner-bk03.webp" alt="Brendan Keane, owner of Integrity Hauling, on a job in Long Island NY" fetchpriority="high">
+      <img id="wg-hero-img" src="images/owner-bk03.webp" alt="Brendan Keane, owner of Integrity Hauling, on a job in Long Island NY" width="600" height="600" fetchpriority="high">
     </div>
   </section>
 
@@ -730,14 +730,14 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
           <h3>Long Island Realtors Trust Brendan With Their Keys</h3>
           <p>When a property needs to be cleared before listing, agents call Brendan. He shows up on time, handles it cleanly, and treats the home like it&rsquo;s his own &mdash; even when the seller is out of state.</p>
           <div class="re-trust-logos">
-            <img src="images/artboard-1.webp" alt="Century 21" loading="lazy">
-            <img src="images/artboard-4.png" alt="Prudential Real Estate" loading="lazy">
-            <img src="images/artboard-2.webp" alt="RealtyConnect USA" loading="lazy">
-            <img src="images/artboard-3.png" alt="Douglas Elliman" loading="lazy">
+            <img src="images/artboard-1.webp" alt="Century 21" width="600" height="600" loading="lazy">
+            <img src="images/artboard-4.png" alt="Prudential Real Estate" width="600" height="600" loading="lazy">
+            <img src="images/artboard-2.webp" alt="RealtyConnect USA" width="600" height="600" loading="lazy">
+            <img src="images/artboard-3.png" alt="Douglas Elliman" width="600" height="600" loading="lazy">
           </div>
         </div>
         <div class="re-trust-photo">
-          <img id="wg-ownerPhoto2" src="images/owner-bk02.webp" alt="Brendan Keane next to his Integrity Hauling trailer on a job" loading="lazy">
+          <img id="wg-ownerPhoto2" src="images/owner-bk02.webp" alt="Brendan Keane next to his Integrity Hauling trailer on a job" width="600" height="600" loading="lazy">
         </div>
       </div>
     </div>
@@ -745,10 +745,10 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
     <div class="partner-logos" data-reveal>
       <p class="partner-logos-label">Trusted by Long Island professionals</p>
       <div class="partner-logos-grid">
-        <img src="images/partner-public-storage.png" alt="Public Storage" loading="lazy">
-        <img src="images/partner-cubesmart.png" alt="CubeSmart Self Storage" loading="lazy">
-        <img src="images/partner-prime-storage.webp" alt="Prime Storage" loading="lazy">
-        <img src="images/partner-li-ducks.webp" alt="Long Island Ducks" loading="lazy">
+        <img src="images/partner-public-storage.png" alt="Public Storage" width="225" height="225" loading="lazy">
+        <img src="images/partner-cubesmart.png" alt="CubeSmart Self Storage" width="225" height="225" loading="lazy">
+        <img src="images/partner-prime-storage.webp" alt="Prime Storage" width="200" height="200" loading="lazy">
+        <img src="images/partner-li-ducks.webp" alt="Long Island Ducks" width="225" height="225" loading="lazy">
       </div>
     </div>
   </section>

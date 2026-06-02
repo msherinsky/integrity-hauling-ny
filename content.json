@@ -1,0 +1,54 @@
+{
+  "name": "",
+  "phone": "",
+  "address": "",
+  "hours": {
+    "Fri": {
+      "c": "18:00",
+      "o": "08:00",
+      "x": false
+    },
+    "Mon": {
+      "c": "18:00",
+      "o": "08:00",
+      "x": false
+    },
+    "Sat": {
+      "c": "15:00",
+      "o": "09:00",
+      "x": false
+    },
+    "Sun": {
+      "c": "17:00",
+      "o": "09:00",
+      "x": true
+    },
+    "Thu": {
+      "c": "18:00",
+      "o": "08:00",
+      "x": false
+    },
+    "Tue": {
+      "c": "18:00",
+      "o": "08:00",
+      "x": false
+    },
+    "Wed": {
+      "c": "18:00",
+      "o": "08:00",
+      "x": false
+    }
+  },
+  "headline": "You're Good at the Work.",
+  "headlineEm": "Getting Found Is a Different Problem.",
+  "subheadline": "We handle the website, local SEO, AI call answering, and automated follow-ups — so leads come in, jobs get booked, and nothing falls through while you're out on a job.",
+  "ctaText": "See What's Costing You Leads",
+  "ctaColor": "#2563eb",
+  "services": [],
+  "testimonials": [],
+  "gallery": [],
+  "facebook": "",
+  "googleBiz": "",
+  "instagram": "",
+  "copyright": ""
+}
