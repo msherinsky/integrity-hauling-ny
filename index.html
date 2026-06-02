@@ -18,12 +18,17 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Integrity Hauling | Junk Removal Long Island NY | 5-Star Rated">
   <meta name="twitter:description" content="Long Island's 5-star junk removal. 215 Google reviews, 27 years experience. Estate cleanouts, appliance removal &amp; more. Call (631) 848-6762.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="font" href="fonts/barlow-condensed-800.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="fonts/barlow-600.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="images/owner-bk03.webp" fetchpriority="high">
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=optional" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=optional"></noscript>
 <style>
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/barlow-400.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/barlow-500.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/barlow-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/barlow-700.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/barlow-condensed-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/barlow-condensed-700.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/barlow-condensed-800.woff2) format('woff2')}
 /* ── INTEGRITY HAULING — Brand: Forest Green + Yellow ─────────────── */
 :root{--color-primary:#009444;--color-primary-dark:#007838;--color-primary-deeper:#005028;--color-primary-mid:#FFDE17;--color-primary-light:#F0FAF0;--color-header:#009444;--color-hero-bg:#009444;--color-dark:#1A1A1A;--color-footer:#005028;--color-light-alt:#F5FAF5;--color-white:#FFFFFF;--color-body:#1A1A1A;--color-border:#D8E8D8;--font-heading:'Barlow Condensed',sans-serif;--font:'Barlow',sans-serif;--radius-card:6px;--radius-pill:22px;--transition:0.25s ease}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -65,7 +70,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .btn-primary:hover{opacity:0.88;box-shadow:0 6px 32px rgba(0,148,68,0.65)}
 .btn-ghost{display:inline-block;padding:13px 28px;background:transparent;color:var(--color-white);font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;border:2px solid var(--color-white);border-radius:4px;cursor:pointer;font-family:var(--font);transition:background var(--transition),color var(--transition)}
 .btn-ghost:hover{background:var(--color-white);color:var(--color-primary-dark)}
-.hero{position:relative;height:92vh;min-height:600px;background:linear-gradient(to bottom,#009444 82%,#006A34 100%);background-attachment:fixed;display:flex;align-items:stretch;overflow:hidden}
+.hero{position:relative;height:92vh;min-height:600px;background:linear-gradient(to bottom,#009444 82%,#006A34 100%);display:flex;align-items:stretch;overflow:hidden}
 .hero-left{width:100%;display:flex;align-items:center;padding:56px 60px 56px 80px;position:relative;z-index:2}
 .hero-right{position:absolute;inset:0;overflow:hidden}
 .hero-right img{position:absolute;top:0;left:0;right:0;bottom:-20%;width:100%;height:120%;object-fit:cover;object-position:60% 5%;display:block}
@@ -1321,7 +1326,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
     },{passive:true});
   })();
   </script>
-  <script src="content-loader.js"></script>
+  <script src="content-loader.js" defer></script>
 
 </body>
 </html>
