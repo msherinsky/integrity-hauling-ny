@@ -176,8 +176,10 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .svc-intro{max-width:660px;margin:0 auto 40px;text-align:center}
 .svc-intro p{color:#444;font-size:16px;line-height:1.7;margin-bottom:16px}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.svc-card{position:relative;overflow:hidden;border-radius:4px;min-height:280px;background-size:cover;background-position:center;display:block;text-decoration:none}
-.svc-card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,18,10,0.1) 0%,rgba(10,18,10,0.55) 40%,rgba(10,18,10,0.88) 75%)}
+.svc-card{position:relative;overflow:hidden;border-radius:4px;min-height:280px;display:block;text-decoration:none}
+.svc-card-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;display:block}
+.svc-card-overlay{position:absolute;inset:0;z-index:1}
+.svc-card-overlay{background:linear-gradient(180deg,rgba(10,18,10,0.1) 0%,rgba(10,18,10,0.55) 40%,rgba(10,18,10,0.88) 75%)}
 .svc-card--featured{grid-column:span 2}
 .svc-card--wide{grid-column:span 3;min-height:200px}
 .svc-card-badge{position:absolute;top:12px;left:12px;background:#FFDE17;border-radius:3px;padding:4px 10px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#111}
@@ -684,7 +686,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
     <div class="owner-inner">
 
       <div style="order:2;" class="owner-photo-wrap" data-reveal data-reveal-delay="150">
-        <img id="wg-ownerPhoto1" src="images/owner-bk01.webp" alt="Brendan Keane, owner of Integrity Hauling LLC, Sayville NY" width="600" height="450" loading="lazy">
+        <img id="wg-ownerPhoto1" src="images/owner-bk01.webp" alt="Brendan Keane, owner of Integrity Hauling LLC, Sayville NY" width="450" height="450" loading="lazy">
         <div class="owner-badge">
           <span class="owner-badge-score">&#9733; 5.0</span>
           <span class="owner-badge-label">215 Google Reviews</span>
@@ -739,10 +741,10 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
           <h3>Long Island Realtors Trust Brendan With Their Keys</h3>
           <p>When a property needs to be cleared before listing, agents call Brendan. He shows up on time, handles it cleanly, and treats the home like it&rsquo;s his own &mdash; even when the seller is out of state.</p>
           <div class="re-trust-logos">
-            <img src="images/artboard-1.webp" alt="Century 21" width="600" height="600" loading="lazy">
-            <img src="images/artboard-4.webp" alt="Prudential Real Estate" width="600" height="600" loading="lazy">
-            <img src="images/artboard-2.webp" alt="RealtyConnect USA" width="600" height="600" loading="lazy">
-            <img src="images/artboard-3.webp" alt="Douglas Elliman" width="600" height="600" loading="lazy">
+            <img src="images/artboard-1.webp" alt="Century 21" width="90" height="90" loading="lazy">
+            <img src="images/artboard-4.webp" alt="Prudential Real Estate" width="90" height="90" loading="lazy">
+            <img src="images/artboard-2.webp" alt="RealtyConnect USA" width="90" height="90" loading="lazy">
+            <img src="images/artboard-3.webp" alt="Douglas Elliman" width="90" height="90" loading="lazy">
           </div>
         </div>
         <div class="re-trust-photo">
@@ -754,10 +756,10 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
     <div class="partner-logos" data-reveal>
       <p class="partner-logos-label">Trusted by Long Island professionals</p>
       <div class="partner-logos-grid">
-        <img src="images/partner-public-storage.png" alt="Public Storage" width="225" height="225" loading="lazy">
-        <img src="images/partner-cubesmart.png" alt="CubeSmart Self Storage" width="225" height="225" loading="lazy">
-        <img src="images/partner-prime-storage.webp" alt="Prime Storage" width="200" height="200" loading="lazy">
-        <img src="images/partner-li-ducks.webp" alt="Long Island Ducks" width="225" height="225" loading="lazy">
+        <img src="images/partner-public-storage.png" alt="Public Storage" width="90" height="90" loading="lazy">
+        <img src="images/partner-cubesmart.png" alt="CubeSmart Self Storage" width="90" height="90" loading="lazy">
+        <img src="images/partner-prime-storage.webp" alt="Prime Storage" width="90" height="90" loading="lazy">
+        <img src="images/partner-li-ducks.webp" alt="Long Island Ducks" width="90" height="90" loading="lazy">
       </div>
     </div>
   </section>
@@ -775,7 +777,8 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 
       <div class="svc-grid">
 
-        <a href="junk-removal.html" class="svc-card svc-card--featured" style="background-image:url(images/service-residential-clutter.webp);" data-reveal>
+        <a href="junk-removal.html" class="svc-card svc-card--featured" data-reveal>
+          <img src="images/service-residential-clutter.webp" class="svc-card-img" alt="" width="700" height="280" loading="lazy" aria-hidden="true">
           <div class="svc-card-overlay"></div>
           <div class="svc-card-body" data-svc="0">
             <h3>Residential Junk Removal</h3>
@@ -783,7 +786,8 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
           </div>
         </a>
 
-        <a href="estate-cleanouts.html" class="svc-card" style="background-image:url(images/service-commercial-haul.webp);" data-reveal data-reveal-delay="80">
+        <a href="estate-cleanouts.html" class="svc-card" data-reveal data-reveal-delay="80">
+          <img src="images/service-commercial-haul.webp" class="svc-card-img" alt="" width="350" height="280" loading="lazy" aria-hidden="true">
           <div class="svc-card-overlay"></div>
           <div class="svc-card-body" data-svc="1">
             <h3>Estate Cleanouts</h3>
@@ -791,15 +795,17 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
           </div>
         </a>
 
-        <a href="construction-debris-removal.html" class="svc-card svc-card--wide" style="background-image:url(images/service-construction-debris.webp);background-position:center 60%;" data-reveal data-reveal-delay="160">
-          <div class="svc-card-overlay" style="background:linear-gradient(180deg,rgba(10,18,10,0.1) 0%,rgba(10,18,10,0.55) 40%,rgba(10,18,10,0.88) 75%);"></div>
+        <a href="construction-debris-removal.html" class="svc-card svc-card--wide" data-reveal data-reveal-delay="160">
+          <img src="images/service-construction-debris.webp" class="svc-card-img" alt="" width="1100" height="200" style="object-position:center 60%" loading="lazy" aria-hidden="true">
+          <div class="svc-card-overlay"></div>
           <div class="svc-card-body" data-svc="2">
             <h3>Construction Debris Removal</h3>
             <p>Your contractor finished. The debris didn&rsquo;t leave with them. Brendan clears it fast so your project actually gets done. Commercial accounts welcome.</p>
           </div>
         </a>
 
-        <a href="appliance-removal.html" class="svc-card" style="background-image:url(images/gbp-photo-22.webp);background-position:center 30%;" data-reveal>
+        <a href="appliance-removal.html" class="svc-card" data-reveal>
+          <img src="images/gbp-photo-22.webp" class="svc-card-img" alt="" width="350" height="280" style="object-position:center 30%" loading="lazy" aria-hidden="true">
           <div class="svc-card-overlay"></div>
           <div class="svc-card-body" data-svc="3">
             <h3>Appliance &amp; Furniture Removal</h3>
@@ -807,7 +813,8 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
           </div>
         </a>
 
-        <a href="garage-cleanouts.html" class="svc-card svc-card--featured" style="background-image:url(images/gbp-photo-33.webp);background-position:center 40%;" data-reveal data-reveal-delay="80">
+        <a href="garage-cleanouts.html" class="svc-card svc-card--featured" data-reveal data-reveal-delay="80">
+          <img src="images/gbp-photo-33.webp" class="svc-card-img" alt="" width="700" height="280" style="object-position:center 40%" loading="lazy" aria-hidden="true">
           <div class="svc-card-overlay"></div>
           <div class="svc-card-body" data-svc="4">
             <h3>Garage &amp; Basement Cleanouts</h3>
