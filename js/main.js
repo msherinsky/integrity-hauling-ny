@@ -86,6 +86,13 @@ document.querySelectorAll('.ba-slider').forEach(function(slider){
 })();
 
 (function(){
+  if(!window.matchMedia||!window.matchMedia('(max-width:768px)').matches) return;
+  var track=document.querySelector('.trust-ticker-track');
+  if(!track) return;
+  track.innerHTML+=track.innerHTML;
+})();
+
+(function(){
   if(!window.matchMedia||window.matchMedia('(pointer:coarse)').matches) return;
   var heroImg=document.querySelector('.hero-right img');
   var hero=document.querySelector('.hero');
