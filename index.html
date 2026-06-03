@@ -454,14 +454,6 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
 .google-badge-label{display:block;font-size:11px;color:#666;font-weight:500;margin-top:2px}
 /* LOCATIONS — COMMA LIST */
 .location-list{font-size:15px;color:rgba(17,17,17,0.7);line-height:1.9;margin-top:20px;margin-bottom:28px}
-/* STICKY MOBILE CTA BAR */
-.sticky-mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:990;background:#005028;border-top:3px solid #FFDE17;padding:10px 16px;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 -4px 16px rgba(0,0,0,0.2)}
-@media(max-width:768px){.sticky-mobile-cta{display:flex};body{padding-bottom:64px}}
-.sticky-mobile-call{display:flex;flex-direction:column;line-height:1.2;text-decoration:none}
-.sticky-mobile-call .call-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.92)}
-.sticky-mobile-call .call-number{font-family:var(--font-heading);font-size:18px;font-weight:800;color:#FFDE17}
-.sticky-cta-btn{background:#FFDE17;color:#111;font-family:var(--font-heading);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:0.5px;padding:10px 20px;border-radius:4px;white-space:nowrap;text-decoration:none;flex-shrink:0}
-.sticky-cta-btn:hover{background:#e6c200}
 </style>
 
 <script type="application/ld+json">
@@ -1211,17 +1203,19 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:800}
     </div>
   </div>
 
-  <!-- STICKY MOBILE CTA BAR -->
-  <div class="sticky-mobile-cta" role="complementary" aria-label="Quick contact">
-    <a href="tel:6318486762" data-phone-href class="sticky-mobile-call">
-      <span class="call-label">Call Brendan</span>
-      <span class="call-number">(631) 848-6762</span>
-    </a>
-    <a href="contact.html" class="sticky-cta-btn" data-modal="quote">Free Quote</a>
-  </div>
-
   <script src="js/main.js" defer></script>
   <script src="content-loader.js" defer></script>
+  <script src="js/chat-widget.js"
+    data-client="integrity-hauling-ny"
+    data-name="Integrity Hauling"
+    data-subtitle="Long Island junk removal — 27 years"
+    data-greeting="Hey! Looking for junk removal on Long Island? Brendan picks up — get a free quote in minutes."
+    data-colorPrimary="#009444"
+    data-colorDark="#005028"
+    data-colorHeader="#005028"
+    data-phone="(631) 848-6762"
+    data-quickReplies="Get a price|Same-day availability|What do you haul?|Estate cleanouts"
+    defer></script>
 
 </body>
 </html>
