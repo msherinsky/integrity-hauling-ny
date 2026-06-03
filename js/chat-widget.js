@@ -28,8 +28,8 @@
       --wg-navy:       ${COLOR_HEADER};
       --wg-blue:       ${COLOR_PRIMARY};
       --wg-blue-dark:  ${COLOR_DARK};
-      --wg-blue-mid:   #6CC3E8;
-      --wg-teal:       #00C9B1;
+      --wg-blue-mid:   #4DB87A;
+      --wg-teal:       #FFDE17;
       --wg-green:      #22C55E;
       --wg-off-white:  #F6F9FF;
       --wg-white:      #FFFFFF;
@@ -45,7 +45,7 @@
       background: var(--wg-blue);
       border: none; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 16px rgba(9,170,225,0.45);
+      box-shadow: 0 4px 16px rgba(0,148,68,0.35);
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
       z-index: 9999;
       outline: none;
@@ -67,7 +67,7 @@
     }
     #wg-trigger:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(9,170,225,0.6);
+      box-shadow: 0 8px 28px rgba(0,148,68,0.5);
       background: var(--wg-blue-dark);
     }
     #wg-trigger:active { transform: translateY(0); }
@@ -182,7 +182,7 @@
     .wg-msg-row.wg-user .wg-bubble {
       background: var(--wg-blue); color: white;
       border-radius: 16px 16px 4px 16px;
-      box-shadow: 0 4px 14px rgba(9,170,225,0.35);
+      box-shadow: 0 4px 14px rgba(0,148,68,0.25);
     }
     .wg-intro-bubble {
       max-width: 93% !important;
@@ -292,18 +292,18 @@
     .wg-input::placeholder { color: var(--wg-muted); }
     .wg-input:focus {
       border-color: var(--wg-blue-mid);
-      box-shadow: 0 0 0 3px rgba(9,170,225,0.1);
+      box-shadow: 0 0 0 3px rgba(0,148,68,0.1);
     }
     .wg-send {
       width: 40px; height: 40px; background: var(--wg-blue);
       border: none; border-radius: 10px; cursor: pointer;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0;
       transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
-      box-shadow: 0 2px 8px rgba(9,170,225,0.4);
+      box-shadow: 0 2px 8px rgba(0,148,68,0.3);
     }
     .wg-send:hover:not(:disabled) {
       transform: translateY(-1px); background: var(--wg-blue-dark);
-      box-shadow: 0 4px 14px rgba(9,170,225,0.5);
+      box-shadow: 0 4px 14px rgba(0,148,68,0.4);
     }
     .wg-send:active:not(:disabled) { transform: translateY(0); }
     .wg-send:disabled { background: var(--wg-border); cursor: not-allowed; box-shadow: none; }
